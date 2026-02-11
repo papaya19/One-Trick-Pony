@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://xemiier5q1s5"]
+
+[ext_resource type="Texture2D" uid="uid://c80ibt476amo7" path="res://Assets/Health Placeholder.png" id="1_e0onf"]
+
+[node name="HUD" type="Control" unique_id=1087313395]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HealthPlaceholder" type="Sprite2D" parent="." unique_id=1152466679]
+position = Vector2(127.19916, 44.25)
+scale = Vector2(0.5169492, 0.5169492)
+texture = ExtResource("1_e0onf")
