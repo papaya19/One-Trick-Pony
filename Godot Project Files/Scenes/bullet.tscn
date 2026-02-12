@@ -5,7 +5,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oduel"]
 
-[node name="Bullet" type="Area2D" unique_id=225554096]
+[node name="Bullet" type="Area2D" unique_id=225554096 groups=["bullet"]]
 script = ExtResource("1_oduel")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1995897303]

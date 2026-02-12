@@ -15,10 +15,21 @@ run/main_scene="uid://bf7bvhggticbd"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://ppsdqblm062y"
+
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/stretch/mode="viewport"
+
+[global_group]
+
+enemies=""
+bullet=""
+player=""
 
 [input]
 

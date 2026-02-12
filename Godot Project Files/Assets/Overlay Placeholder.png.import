@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c80ibt476amo7"
-path="res://.godot/imported/Health Placeholder.png-f8414deffd3172a94bc4e3c0887fddcd.ctex"
+uid="uid://t6tei14qfrb3"
+path="res://.godot/imported/Overlay Placeholder.png-1730a4ecfa6602779942762d444de0e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Health Placeholder.png"
-dest_files=["res://.godot/imported/Health Placeholder.png-f8414deffd3172a94bc4e3c0887fddcd.ctex"]
+source_file="res://Assets/Overlay Placeholder.png"
+dest_files=["res://.godot/imported/Overlay Placeholder.png-1730a4ecfa6602779942762d444de0e3.ctex"]
 
 [params]
 

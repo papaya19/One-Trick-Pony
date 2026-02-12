@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dwfpcfxio54y4" path="res://Scenes/gun.tscn" id="1_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://dhi5lmgj3uvww" path="res://Scenes/player.tscn" id="1_tumq0"]
+[ext_resource type="PackedScene" uid="uid://b87nx6gflt34t" path="res://Scenes/enemy.tscn" id="3_6phgx"]
 
 [node name="Level" type="Node2D" unique_id=1152983213]
 
@@ -10,3 +11,7 @@ position = Vector2(960, 540)
 
 [node name="Player" parent="." unique_id=1840420532 instance=ExtResource("1_tumq0")]
 position = Vector2(960, 540)
+
+[node name="Enemy" parent="." unique_id=433966500 instance=ExtResource("3_6phgx")]
+position = Vector2(200, 200)
+rotation = 0.030834474
