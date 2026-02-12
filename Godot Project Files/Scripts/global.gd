@@ -1,6 +1,6 @@
 extends Node
 
-signal player_take_damage(damage_amount)
+signal player_take_damage(damage_amount: int)
 @export var player_health = 8
 
 # Called when the node enters the scene tree for the first time.
