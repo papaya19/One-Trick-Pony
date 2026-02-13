@@ -31,10 +31,8 @@ func summon_enemy():
 
 
 func get_random_coordinates():
-	# 1. Get the screen size
 	var screen_size = get_viewport_rect().size
 	
-	# 2. Pick a random side: 0=Top, 1=Bottom, 2=Left, 3=Right
 	var side = randi() % 4
 	
 	match side:
