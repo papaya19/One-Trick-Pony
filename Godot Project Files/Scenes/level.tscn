@@ -2,9 +2,18 @@
 
 [ext_resource type="PackedScene" uid="uid://dwfpcfxio54y4" path="res://Scenes/gun.tscn" id="1_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://dhi5lmgj3uvww" path="res://Scenes/player.tscn" id="1_tumq0"]
-[ext_resource type="PackedScene" uid="uid://b87nx6gflt34t" path="res://Scenes/enemy.tscn" id="3_6phgx"]
+[ext_resource type="PackedScene" uid="uid://8aq3xri8qeeh" path="res://Scenes/enemy_spawner.tscn" id="4_81xng"]
 
 [node name="Level" type="Node2D" unique_id=1152983213]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1857651222]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Gun" parent="." unique_id=961834057 instance=ExtResource("1_k5f4k")]
 position = Vector2(960, 540)
@@ -12,6 +21,7 @@ position = Vector2(960, 540)
 [node name="Player" parent="." unique_id=1840420532 instance=ExtResource("1_tumq0")]
 position = Vector2(960, 540)
 
-[node name="Enemy" parent="." unique_id=433966500 instance=ExtResource("3_6phgx")]
-position = Vector2(200, 200)
-rotation = 0.030834474
+[node name="Enemy Spawner" parent="." unique_id=1916731149 instance=ExtResource("4_81xng")]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1509507309]
+position = Vector2(553, 60)
