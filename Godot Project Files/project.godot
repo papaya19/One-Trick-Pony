@@ -27,9 +27,9 @@ window/stretch/mode="viewport"
 
 [global_group]
 
-enemies=""
 bullet=""
 player=""
+enemy=""
 
 [input]
 
