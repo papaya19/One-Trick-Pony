@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://xemiier5q1s5"]
 
-[ext_resource type="Texture2D" uid="uid://t6tei14qfrb3" path="res://Assets/Overlay Placeholder.png" id="1_45lgv"]
+[ext_resource type="Texture2D" uid="uid://t6tei14qfrb3" path="res://Assets/Overlay Placeholder.png" id="1_e0onf"]
+[ext_resource type="Script" uid="uid://hy7d77ks51tc" path="res://Scripts/hud.gd" id="1_fccik"]
 
 [node name="HUD" type="Control" unique_id=1087313395]
 layout_mode = 3
@@ -9,28 +10,31 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fccik")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2115182615 groups=["bullet"]]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("1_45lgv")
+texture = ExtResource("1_e0onf")
 
-[node name="Label" type="Label" parent="." unique_id=166411888]
+[node name="Ammo" type="Label" parent="." unique_id=166411888]
 layout_mode = 0
 offset_left = 45.0
 offset_top = 1015.0
 offset_right = 123.0
 offset_bottom = 1038.0
-text = "Ammo: 10"
+text = "Ammo: Null"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="." unique_id=1329355091]
+[node name="Coins" type="Label" parent="." unique_id=1329355091]
 layout_mode = 0
 offset_left = 1799.0
 offset_top = 35.0
 offset_right = 1860.0
 offset_bottom = 58.0
-text = "Coins: 20"
+text = "Coins: Null"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=832035865]
 layout_mode = 0
@@ -40,10 +44,10 @@ offset_right = 1114.0
 offset_bottom = 1067.0
 color = Color(0, 1, 0, 1)
 
-[node name="Label3" type="Label" parent="." unique_id=640499318]
+[node name="Health" type="Label" parent="." unique_id=640499318]
 layout_mode = 0
 offset_left = 892.0
 offset_top = 1015.0
 offset_right = 962.0
 offset_bottom = 1038.0
-text = "Health: 8"
+text = "Health: Null"
