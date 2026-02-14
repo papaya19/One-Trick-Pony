@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://dwfpcfxio54y4" path="res://Scenes/gun.tscn" id="1_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://dhi5lmgj3uvww" path="res://Scenes/player.tscn" id="1_tumq0"]
 [ext_resource type="PackedScene" uid="uid://8aq3xri8qeeh" path="res://Scenes/enemy_spawner.tscn" id="4_81xng"]
-[ext_resource type="PackedScene" uid="uid://d2kukq6a11gar" path="res://Scenes/coin.tscn" id="4_wqkje"]
 
 [node name="Level" type="Node2D" unique_id=1152983213]
 
@@ -23,9 +22,3 @@ position = Vector2(960, 540)
 position = Vector2(960, 540)
 
 [node name="Enemy Spawner" parent="." unique_id=1916731149 instance=ExtResource("4_81xng")]
-
-[node name="Node2D" type="Node2D" parent="." unique_id=1509507309]
-position = Vector2(553, 60)
-
-[node name="Coin" parent="." unique_id=2000904391 instance=ExtResource("4_wqkje")]
-position = Vector2(193, 132)

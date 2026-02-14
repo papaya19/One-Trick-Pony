@@ -1,6 +1,5 @@
 extends Area2D
 
-
 var speed = 600 #we should make this tween, it would work well
 
 func _process(delta: float) -> void:

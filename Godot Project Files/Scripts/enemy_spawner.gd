@@ -7,12 +7,6 @@ var enemy_can_spawn = true
 @onready var screen_size = get_viewport_rect().size
 var spawn_pos = Vector2.ZERO
 
-func _ready() -> void:
-	if enemy_can_spawn:
-		enemy_can_spawn = false
-		await get_tree().create_timer(enemy_spawn_time).timeout
-		summon_enemy()
-		enemy_can_spawn = true
 
 func _process(delta: float) -> void:
 	if enemy_can_spawn:
