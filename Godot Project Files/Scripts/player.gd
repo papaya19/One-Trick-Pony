@@ -3,9 +3,13 @@ extends StaticBody2D
 
 func _ready() -> void:
 	Global.player_take_damage.connect(take_damage)
+	Global.player_gain_coin.connect(get_coin)
 
 func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
 	
 func take_damage(damage):
 	Global.player_health -= damage
+
+func get_coin(coin_value):
+	Global.coin_count += coin_value
