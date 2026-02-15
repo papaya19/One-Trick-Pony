@@ -4,21 +4,18 @@
 [ext_resource type="Script" uid="uid://hy7d77ks51tc" path="res://Scripts/hud.gd" id="1_fccik"]
 
 [node name="HUD" type="Control" unique_id=1087313395]
-process_mode = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 script = ExtResource("1_fccik")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2115182615 groups=["bullet"]]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-mouse_filter = 2
 texture = ExtResource("1_e0onf")
 
 [node name="Ammo" type="Label" parent="." unique_id=166411888]
