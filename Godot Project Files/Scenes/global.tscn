@@ -2,8 +2,6 @@
 
 [ext_resource type="Script" uid="uid://1a46fps04g5s" path="res://Scripts/global.gd" id="1_uoijj"]
 [ext_resource type="PackedScene" uid="uid://xemiier5q1s5" path="res://Scenes/hud.tscn" id="1_yl8w0"]
-[ext_resource type="PackedScene" uid="uid://dbtck1hfeoxfx" path="res://Ignore/menu.tscn" id="2_pklo1"]
-[ext_resource type="PackedScene" uid="uid://dk4cxufl7vrqi" path="res://Ignore/upgrades.tscn" id="3_6sv3n"]
 
 [node name="Global" type="Node" unique_id=1886466201]
 process_mode = 3
@@ -12,7 +10,3 @@ script = ExtResource("1_uoijj")
 [node name="GUI" type="CanvasLayer" parent="." unique_id=1360440419]
 
 [node name="HUD" parent="GUI" unique_id=1087313395 instance=ExtResource("1_yl8w0")]
-
-[node name="Menu" parent="GUI" unique_id=805871758 instance=ExtResource("2_pklo1")]
-
-[node name="Upgrades" parent="GUI" unique_id=523493890 instance=ExtResource("3_6sv3n")]
