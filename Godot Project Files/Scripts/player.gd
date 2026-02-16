@@ -7,9 +7,14 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
+	if Global.player_health <= 0:
+		player_died
 	
 func take_damage(damage):
 	Global.player_health -= damage
 
 func get_coin(coin_value):
 	Global.coin_count += coin_value
+
+func player_died():
+	get_tree().quit()

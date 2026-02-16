@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://dhi5lmgj3uvww" path="res://Scenes/player.tscn" id="1_tumq0"]
 [ext_resource type="PackedScene" uid="uid://8aq3xri8qeeh" path="res://Scenes/enemy_spawner.tscn" id="4_81xng"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6phgx"]
+size = Vector2(100, 100)
+
 [node name="Level" type="Node2D" unique_id=1152983213]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1857651222]
@@ -14,6 +17,7 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="Gun" parent="." unique_id=961834057 instance=ExtResource("1_k5f4k")]
 position = Vector2(960, 540)
@@ -22,3 +26,9 @@ position = Vector2(960, 540)
 position = Vector2(960, 540)
 
 [node name="Enemy Spawner" parent="." unique_id=1916731149 instance=ExtResource("4_81xng")]
+
+[node name="Coin Collector" type="Area2D" parent="." unique_id=1986036522 groups=["coin_collector"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin Collector" unique_id=2062352886]
+position = Vector2(1920, 0)
+shape = SubResource("RectangleShape2D_6phgx")

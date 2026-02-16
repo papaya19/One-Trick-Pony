@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://bw4fbt1hanvtw"]
 
-[ext_resource type="Script" uid="uid://dtfietgohox21" path="res://start.gd" id="1_3bxa3"]
+[ext_resource type="Script" uid="uid://dtfietgohox21" path="res://Scripts/start.gd" id="1_3bxa3"]
 
 [node name="Start" type="Control" unique_id=579261995]
 process_mode = 3
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 100.0
@@ -47,7 +48,7 @@ text = "Shotgun"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Assult Riffle" type="Button" parent="HBoxContainer/Control2" unique_id=1371229962]
+[node name="Assault Rifle" type="Button" parent="HBoxContainer/Control2" unique_id=1371229962]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.167
@@ -60,7 +61,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Assult Riffle"
+text = "Assault Rifle"
 
 [node name="Control3" type="Control" parent="HBoxContainer" unique_id=1717639624]
 layout_mode = 2
@@ -82,5 +83,5 @@ grow_vertical = 2
 text = "Sniper"
 
 [connection signal="pressed" from="HBoxContainer/Control/Shotgun" to="." method="_on_shotgun_pressed"]
-[connection signal="pressed" from="HBoxContainer/Control2/Assult Riffle" to="." method="_on_assult_riffle_pressed"]
+[connection signal="pressed" from="HBoxContainer/Control2/Assault Rifle" to="." method="_on_assult_riffle_pressed"]
 [connection signal="pressed" from="HBoxContainer/Control3/Sniper" to="." method="_on_sniper_pressed"]
