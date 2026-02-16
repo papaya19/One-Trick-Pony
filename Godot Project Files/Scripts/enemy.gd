@@ -6,6 +6,7 @@ const coin = preload("res://Scenes/coin.tscn")
 func _process(delta: float) -> void:
 	var direction = global_position.direction_to(Vector2(960,540))
 	position += direction * speed * delta
+	look_at(get_node("../../Player").global_position)
 
 
 func _on_area_2d_area_entered(body) -> void:
