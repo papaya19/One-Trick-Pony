@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends Node2D
 
 var speed = 100
 const coin = preload("res://Scenes/coin.tscn")
