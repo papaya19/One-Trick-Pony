@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends Node2D
 
 
 func _ready() -> void:
@@ -8,7 +8,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
 	if Global.player_health <= 0:
-		player_died
+		player_died()
 	
 func take_damage(damage):
 	Global.player_health -= damage
