@@ -6,7 +6,7 @@ const coin = preload("res://Scenes/coin.tscn")
 func _process(delta: float) -> void:
 	var direction = global_position.direction_to(Vector2(960,540))
 	position += direction * speed * delta
-	look_at(get_node("../../Player").global_position)
+	look_at(get_node("/root/Level/Player").global_position)
 
 
 func _on_area_2d_area_entered(body) -> void:
@@ -21,4 +21,4 @@ func _on_area_2d_area_entered(body) -> void:
 func spawn_coin():
 	var coin_instance = coin.instantiate()
 	coin_instance.global_position = global_position
-	get_parent().add_child.call_deferred(coin_instance)# this does mean that coin instances 
+	get_tree().root.add_child.call_deferred(coin_instance)# this does mean that coin instances 

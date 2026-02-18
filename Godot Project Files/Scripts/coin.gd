@@ -3,8 +3,9 @@ extends Area2D
 var speed = 600 #we should make this tween, it would work well
 
 func _process(delta: float) -> void:
-	var direction = global_position.direction_to(Vector2(1920,0))
+	var direction = global_position.direction_to(get_node("/root/Level/Coin Collector").global_position)
 	position += direction * speed * delta
+	look_at(get_node("/root/Level/Coin Collector").global_position)
 
 
 func _on_area_entered(body) -> void:

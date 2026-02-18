@@ -12,6 +12,7 @@ script = ExtResource("1_oduel")
 shape = SubResource("CircleShape2D_oduel")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1036841548]
+rotation = 1.5707964
 scale = Vector2(0.125, 0.125)
 texture = ExtResource("1_xjght")
 

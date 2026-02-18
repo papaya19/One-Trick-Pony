@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dhi5lmgj3uvww"]
 
 [ext_resource type="Script" uid="uid://dh4xohpt6wg5b" path="res://Scripts/player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://ddsykhmac75t6" path="res://icon.svg" id="2_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://d1gnsaex02ltn" path="res://Assets/AR.png" id="2_cvnsp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vgqql"]
 radius = 63.126858
@@ -10,7 +10,9 @@ radius = 63.126858
 script = ExtResource("1_cvnsp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=892038566]
-texture = ExtResource("2_6t5aa")
+rotation = 1.5707964
+scale = Vector2(4, 4)
+texture = ExtResource("2_cvnsp")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1550033373 groups=["player"]]
 

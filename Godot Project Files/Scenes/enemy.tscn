@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b87nx6gflt34t"]
 
 [ext_resource type="Script" uid="uid://duvujgwigy7cm" path="res://Scripts/enemy.gd" id="1_1f0kj"]
-[ext_resource type="Texture2D" uid="uid://ddsykhmac75t6" path="res://icon.svg" id="1_hghv2"]
+[ext_resource type="Texture2D" uid="uid://dy6jyec2oqbfo" path="res://Assets/Basic.png" id="2_1f0kj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1f0kj"]
 radius = 30.265491
@@ -10,9 +10,9 @@ radius = 30.265491
 script = ExtResource("1_1f0kj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1211754099]
-self_modulate = Color(1, 0, 0, 1)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_hghv2")
+rotation = 1.5707964
+scale = Vector2(2, 2)
+texture = ExtResource("2_1f0kj")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1471195255 groups=["enemy"]]
 

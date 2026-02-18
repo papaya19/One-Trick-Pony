@@ -3,21 +3,18 @@
 [ext_resource type="PackedScene" uid="uid://dwfpcfxio54y4" path="res://Scenes/gun.tscn" id="1_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://dhi5lmgj3uvww" path="res://Scenes/player.tscn" id="1_tumq0"]
 [ext_resource type="PackedScene" uid="uid://8aq3xri8qeeh" path="res://Scenes/enemy_spawner.tscn" id="4_81xng"]
+[ext_resource type="Texture2D" uid="uid://cqo57pn2skw40" path="res://Assets/Stars.png" id="4_wqkje"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6phgx"]
 size = Vector2(100, 100)
 
 [node name="Level" type="Node2D" unique_id=1152983213]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1857651222]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="TextureRect" type="TextureRect" parent="." unique_id=15917347]
 offset_right = 1920.0
 offset_bottom = 1080.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
+texture = ExtResource("4_wqkje")
+stretch_mode = 1
 
 [node name="Gun" parent="." unique_id=961834057 instance=ExtResource("1_k5f4k")]
 position = Vector2(960, 540)
@@ -28,7 +25,9 @@ position = Vector2(960, 540)
 [node name="Enemy Spawner" parent="." unique_id=1916731149 instance=ExtResource("4_81xng")]
 
 [node name="Coin Collector" type="Area2D" parent="." unique_id=1986036522 groups=["coin_collector"]]
+position = Vector2(1920, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin Collector" unique_id=2062352886]
-position = Vector2(1920, 0)
 shape = SubResource("RectangleShape2D_6phgx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1428046344]

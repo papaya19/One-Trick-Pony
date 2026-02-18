@@ -24,6 +24,7 @@ Global="*uid://ppsdqblm062y"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="viewport"
+mouse_cursor/custom_image="uid://b68gtr4mjv2om"
 
 [global_group]
 
@@ -52,4 +53,5 @@ reload={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

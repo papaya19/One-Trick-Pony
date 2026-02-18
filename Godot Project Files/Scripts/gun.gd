@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 		Global.bullet_count = Global.magazine_size
 		can_shoot = true
 		Global.reloading = false
-	
+
 	if Input.is_action_pressed("shoot") and can_shoot:
 		can_shoot = false
 		shoot()
@@ -24,10 +24,8 @@ func _process(delta: float) -> void:
 		if Global.bullet_count != 0:
 			can_shoot = true
 
-
 func shoot():
 	var bullet_instance = bullet.instantiate()
 	get_tree().root.add_child(bullet_instance)
 	bullet_instance.global_position = global_position
 	bullet_instance.rotation = rotation
-	
