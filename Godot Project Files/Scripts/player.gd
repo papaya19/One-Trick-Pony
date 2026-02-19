@@ -3,9 +3,9 @@ extends Node2D
 
 func _ready() -> void:
 	Global.player_take_damage.connect(take_damage)
-	Global.player_gain_coin.connect(get_coin)
+	Global.player_gain_energy.connect(gain_energy)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	look_at(get_global_mouse_position())
 	if Global.player_health <= 0:
 		player_died()
@@ -13,8 +13,8 @@ func _process(delta: float) -> void:
 func take_damage(damage):
 	Global.player_health -= damage
 
-func get_coin(coin_value):
-	Global.coin_count += coin_value
+func gain_energy(energy_value):
+	Global.energy_count += energy_value
 
 func player_died():
 	get_tree().quit()

@@ -6,7 +6,7 @@ var reload_time = 2
 var shooting_speed = 0.3
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	look_at(get_global_mouse_position())
 	if (Input.is_action_just_pressed("reload") or Global.bullet_count == 0) and not Input.is_action_pressed("shoot") and Global.bullet_count != Global.magazine_size and not Global.reloading:
 		Global.reloading = true

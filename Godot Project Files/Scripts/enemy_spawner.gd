@@ -8,7 +8,7 @@ var enemy_can_spawn = true
 var spawn_pos = Vector2.ZERO
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if enemy_can_spawn:
 		enemy_can_spawn = false
 		await get_tree().create_timer(enemy_spawn_time).timeout
@@ -25,8 +25,6 @@ func summon_enemy():
 
 
 func get_random_coordinates():
-	var screen_size = get_viewport_rect().size
-	
 	var side = randi() % 4
 	
 	match side:

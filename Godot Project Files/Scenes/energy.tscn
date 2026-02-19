@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://d2kukq6a11gar"]
 
-[ext_resource type="Script" uid="uid://0q6m4lpfbpch" path="res://Scripts/coin.gd" id="1_jgi06"]
-[ext_resource type="Texture2D" uid="uid://b35kvq7dmsrmy" path="res://Assets/coin.png" id="2_jgi06"]
+[ext_resource type="Script" uid="uid://0q6m4lpfbpch" path="res://Scripts/energy.gd" id="1_gr1ml"]
+[ext_resource type="Texture2D" uid="uid://dpfvoxkapoam1" path="res://Assets/newcoin.png" id="2_401a5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h2p6v"]
 radius = 15.033297
 
-[node name="Coin" type="Area2D" unique_id=2000904391 groups=["coin"]]
-script = ExtResource("1_jgi06")
+[node name="Energy" type="Area2D" unique_id=2000904391 groups=["coin"]]
+script = ExtResource("1_gr1ml")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1716805942]
 rotation = 1.5707964
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_jgi06")
+texture = ExtResource("2_401a5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=289891078]
 shape = SubResource("CircleShape2D_h2p6v")

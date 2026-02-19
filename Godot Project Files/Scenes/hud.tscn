@@ -37,7 +37,7 @@ offset_left = 1799.0
 offset_top = 35.0
 offset_right = 1860.0
 offset_bottom = 58.0
-text = "Coins: Null"
+text = "Energy: Null"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=832035865]
 layout_mode = 0

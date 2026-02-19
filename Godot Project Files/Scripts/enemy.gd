@@ -1,7 +1,7 @@
 extends Node2D
 
 var speed = 100
-const coin = preload("res://Scenes/coin.tscn")
+const energy = preload("res://Scenes/energy.tscn")
 
 func _process(delta: float) -> void:
 	var direction = global_position.direction_to(Vector2(960,540))
@@ -10,7 +10,6 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_area_entered(body) -> void:
-	var direction = global_position.direction_to(Vector2(960,540))
 	if body.is_in_group("bullet"):
 		spawn_coin()
 		queue_free()
@@ -19,6 +18,6 @@ func _on_area_2d_area_entered(body) -> void:
 		queue_free()
 
 func spawn_coin():
-	var coin_instance = coin.instantiate()
-	coin_instance.global_position = global_position
-	get_tree().root.add_child.call_deferred(coin_instance)# this does mean that coin instances 
+	var energy_instance = energy.instantiate()
+	energy_instance.global_position = global_position
+	get_tree().root.add_child.call_deferred(energy_instance)# this does mean that coin instances 

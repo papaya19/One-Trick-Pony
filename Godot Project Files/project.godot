@@ -32,7 +32,7 @@ bullet=""
 player=""
 enemy=""
 coin=""
-coin_collector=""
+energy_collector=""
 
 [input]
 
