@@ -4,9 +4,18 @@
 [ext_resource type="PackedScene" uid="uid://dhi5lmgj3uvww" path="res://Scenes/player.tscn" id="1_tumq0"]
 [ext_resource type="PackedScene" uid="uid://8aq3xri8qeeh" path="res://Scenes/enemy_spawner.tscn" id="4_81xng"]
 [ext_resource type="Texture2D" uid="uid://cqo57pn2skw40" path="res://Assets/Stars.png" id="4_wqkje"]
+[ext_resource type="AudioStream" uid="uid://d0dpfvhddilhj" path="res://Assets/sagar sandhra - New Project 2026-02-05 16_27.mp3" id="5_wqkje"]
+[ext_resource type="AudioStream" uid="uid://6b5q0w4tn67c" path="res://Assets/sagar sandhra - New Project 2026-02-09 21_01.mp3" id="6_0f350"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6phgx"]
 size = Vector2(100, 100)
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_0f350"]
+shuffle = true
+fade_time = 1.0
+stream_count = 2
+stream_0 = ExtResource("6_0f350")
+stream_1 = ExtResource("5_wqkje")
 
 [node name="Level" type="Node2D" unique_id=1152983213]
 
@@ -29,3 +38,8 @@ position = Vector2(1920, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Energy Collector" unique_id=2062352886]
 shape = SubResource("RectangleShape2D_6phgx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1715037561]
+stream = SubResource("AudioStreamPlaylist_0f350")
+autoplay = true
+mix_target = 2

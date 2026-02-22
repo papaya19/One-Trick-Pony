@@ -1,6 +1,6 @@
 extends Area2D
 
-var speed = 600 #we should make this tween, it would work well
+var speed: int = 600 #we should make this tween, it would work well
 
 func _process(delta: float) -> void:
 	var direction = global_position.direction_to(get_node("/root/Level/Energy Collector").global_position)

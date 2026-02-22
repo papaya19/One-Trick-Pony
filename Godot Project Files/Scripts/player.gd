@@ -11,7 +11,8 @@ func _process(_delta: float) -> void:
 		player_died()
 	
 func take_damage(damage):
-	Global.player_health -= damage
+	if not Global.invincible:
+		Global.player_health -= damage
 
 func gain_energy(energy_value):
 	Global.energy_count += energy_value

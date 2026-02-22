@@ -1,9 +1,9 @@
 extends Node2D
 
 const bullet = preload("res://Scenes/bullet.tscn")
-var can_shoot = true
-var reload_time = 2
-var shooting_speed = 0.3
+var can_shoot: bool = true
+var reload_time: float = 2
+var shooting_speed: float = 0.3
 
 
 func _process(_delta: float) -> void:
