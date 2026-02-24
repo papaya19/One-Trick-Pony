@@ -1,6 +1,7 @@
 extends Node2D
 
 const enemy = preload("res://Scenes/enemy.tscn")
+const sprinter = preload("res://Scenes/enemy.tscn")
 var enemy_spawn_time = 1
 var enemy_can_spawn = true
 @export var margin: float = 100
