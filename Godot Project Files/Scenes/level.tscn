@@ -19,22 +19,16 @@ stream_1 = ExtResource("5_wqkje")
 
 [node name="Level" type="Node2D" unique_id=1152983213]
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=15917347]
-offset_right = 1920.0
-offset_bottom = 1080.0
-texture = ExtResource("4_wqkje")
-stretch_mode = 1
-
 [node name="Gun" parent="." unique_id=961834057 instance=ExtResource("1_k5f4k")]
-position = Vector2(960, 540)
+position = Vector2(1280, 832)
 
 [node name="Player" parent="." unique_id=1840420532 instance=ExtResource("1_tumq0")]
-position = Vector2(960, 540)
+position = Vector2(1280, 832)
 
 [node name="Enemy Spawner" parent="." unique_id=1916731149 instance=ExtResource("4_81xng")]
 
 [node name="Energy Collector" type="Area2D" parent="." unique_id=1986036522 groups=["energy_collector"]]
-position = Vector2(1920, 0)
+position = Vector2(2560, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Energy Collector" unique_id=2062352886]
 shape = SubResource("RectangleShape2D_6phgx")
@@ -43,3 +37,18 @@ shape = SubResource("RectangleShape2D_6phgx")
 stream = SubResource("AudioStreamPlaylist_0f350")
 autoplay = true
 mix_target = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1439531429]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=15917347]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 128.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_wqkje")
+stretch_mode = 1

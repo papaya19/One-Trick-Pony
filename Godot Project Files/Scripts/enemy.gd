@@ -4,7 +4,7 @@ var enemy_speed: int = 100
 const energy: PackedScene = preload("res://Scenes/energy.tscn")
 
 func _process(delta: float) -> void:
-	var direction = global_position.direction_to(Vector2(960,540))
+	var direction = global_position.direction_to(get_node("/root/Level/Player").global_position)
 	position += direction * enemy_speed * delta
 	look_at(get_node("/root/Level/Player").global_position)
 
