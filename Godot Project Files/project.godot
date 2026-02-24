@@ -13,7 +13,7 @@ config_version=5
 config/name="onetrickpony"
 run/main_scene="uid://bw4fbt1hanvtw"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
 
 [autoload]
 
