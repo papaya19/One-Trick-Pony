@@ -42,7 +42,7 @@ offset_right = 20.0
 offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Shotgun"
+text = "Assault Rifle"
 
 [node name="Control2" type="Control" parent="HBoxContainer" unique_id=1315549404]
 layout_mode = 2
@@ -80,7 +80,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Sniper"
+text = "Assault Rifle"
 
 [connection signal="pressed" from="HBoxContainer/Control/Shotgun" to="." method="_on_shotgun_pressed"]
 [connection signal="pressed" from="HBoxContainer/Control2/Assault Rifle" to="." method="_on_assult_riffle_pressed"]

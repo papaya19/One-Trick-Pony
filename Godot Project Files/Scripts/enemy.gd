@@ -20,9 +20,9 @@ func enemy_take_damage(damage_amount):
 	enemy_health -= damage_amount
 	if enemy_health <= 0:
 		queue_free()
-		spawn_coin()
+		spawn_energy()
 
-func spawn_coin():
+func spawn_energy():
 	var energy_instance = energy.instantiate()
 	energy_instance.global_position = global_position
 	get_tree().root.add_child.call_deferred(energy_instance)# this does mean that coin instances 

@@ -1,11 +1,11 @@
 extends Node2D
 
-const enemy = preload("res://Scenes/enemy.tscn")
-const sprinter = preload("res://Scenes/enemy.tscn")
-var enemy_spawn_time = 1
-var enemy_can_spawn = true
+const enemy: PackedScene  = preload("res://Scenes/enemy.tscn")
+const sprinter: PackedScene  = preload("res://Scenes/enemy.tscn")
+var enemy_spawn_time: float = 1.2
+var enemy_can_spawn: bool = true
 @export var margin: float = 100
-@onready var screen_size = get_viewport_rect().size
+@onready var screen_size: Vector2 = get_viewport_rect().size
 var spawn_pos = Vector2.ZERO
 
 
