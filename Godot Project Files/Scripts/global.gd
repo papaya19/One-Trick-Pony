@@ -4,6 +4,7 @@ signal player_take_damage(damage_amount: int)
 signal player_gain_energy(energy_value: int)
 @export var energy_count: int = 0
 @export var invincible: bool = false
+@export var selected_weapon: String
 var reloading: bool = false
 var bullet_count: int = 0
 

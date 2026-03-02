@@ -4,6 +4,7 @@ extends Node2D
 func _ready() -> void:
 	Global.player_take_damage.connect(take_damage)
 	Global.player_gain_energy.connect(gain_energy)
+	change_weapon(Global.selected_weapon)
 
 func _process(_delta: float) -> void:
 	look_at(get_global_mouse_position())
@@ -19,3 +20,6 @@ func gain_energy(energy_value):
 
 func player_died():
 	get_tree().quit()
+
+func change_weapon(weapon):
+	$Sprite2D.texture = load(str("res://Assets/", weapon, ".png"))

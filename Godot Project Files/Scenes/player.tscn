@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dhi5lmgj3uvww"]
 
 [ext_resource type="Script" uid="uid://dh4xohpt6wg5b" path="res://Scripts/player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://d1gnsaex02ltn" path="res://Assets/AR.png" id="2_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://d1gnsaex02ltn" path="res://Assets/Assault Rifle.png" id="2_cvnsp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vgqql"]
 radius = 63.126858
