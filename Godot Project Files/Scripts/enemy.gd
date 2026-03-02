@@ -1,7 +1,7 @@
 extends Node2D
 
 const enemy_speed: int = 100
-const energy: PackedScene = preload("res://Scenes/energy.tscn")
+const energy: PackedScene = preload("res://Scenes/Spawning/energy.tscn")
 var enemy_health: int = 100
 
 func _process(delta: float) -> void:

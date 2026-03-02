@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://bf7bvhggticbd"]
 
-[ext_resource type="PackedScene" uid="uid://dwfpcfxio54y4" path="res://Scenes/gun.tscn" id="1_k5f4k"]
-[ext_resource type="PackedScene" uid="uid://dhi5lmgj3uvww" path="res://Scenes/player.tscn" id="1_tumq0"]
-[ext_resource type="PackedScene" uid="uid://8aq3xri8qeeh" path="res://Scenes/enemy_spawner.tscn" id="4_81xng"]
-[ext_resource type="Texture2D" uid="uid://cqo57pn2skw40" path="res://Assets/Stars.png" id="4_wqkje"]
-[ext_resource type="AudioStream" uid="uid://d0dpfvhddilhj" path="res://Assets/sagar sandhra - New Project 2026-02-05 16_27.mp3" id="5_wqkje"]
-[ext_resource type="AudioStream" uid="uid://6b5q0w4tn67c" path="res://Assets/sagar sandhra - New Project 2026-02-09 21_01.mp3" id="6_0f350"]
+[ext_resource type="PackedScene" uid="uid://dwfpcfxio54y4" path="res://Scenes/Player/gun.tscn" id="1_k5f4k"]
+[ext_resource type="PackedScene" uid="uid://dhi5lmgj3uvww" path="res://Scenes/Player/player.tscn" id="1_tumq0"]
+[ext_resource type="PackedScene" uid="uid://8aq3xri8qeeh" path="res://Scenes/Technical/enemy_spawner.tscn" id="4_81xng"]
+[ext_resource type="AudioStream" uid="uid://d0dpfvhddilhj" path="res://Assets/Sounds/Music/sagar sandhra - New Project 2026-02-05 16_27.mp3" id="5_wqkje"]
+[ext_resource type="AudioStream" uid="uid://6b5q0w4tn67c" path="res://Assets/Sounds/Music/sagar sandhra - New Project 2026-02-09 21_01.mp3" id="6_0f350"]
+[ext_resource type="Texture2D" uid="uid://dpt6vregpvdtr" path="res://Assets/Background/basic-background.png" id="6_lhx7y"]
+[ext_resource type="Texture2D" uid="uid://dpoh6p8hma6ku" path="res://Assets/Background/black-hole.png" id="7_i5435"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6phgx"]
 size = Vector2(100, 100)
@@ -50,5 +51,11 @@ offset_right = 128.0
 offset_bottom = 128.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_wqkje")
+texture = ExtResource("6_lhx7y")
 stretch_mode = 1
+
+[node name="BlackHole" type="Sprite2D" parent="CanvasLayer" unique_id=1545878363]
+modulate = Color(1, 1, 1, 0.8039216)
+position = Vector2(788, 401)
+scale = Vector2(4, 4)
+texture = ExtResource("7_i5435")

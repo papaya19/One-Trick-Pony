@@ -1,6 +1,6 @@
 extends Node2D
 
-const bullet: PackedScene  = preload("res://Scenes/bullet.tscn")
+const bullet: PackedScene  = preload("res://Scenes/Spawning/bullet.tscn")
 var can_shoot: bool = true
 
 

@@ -1,7 +1,6 @@
 extends Node2D
 
-const enemy: PackedScene  = preload("res://Scenes/enemy.tscn")
-const sprinter: PackedScene  = preload("res://Scenes/enemy.tscn")
+const enemy: PackedScene  = preload("res://Scenes/Spawning/enemy.tscn")
 var enemy_spawn_time: float = 1.2
 var enemy_can_spawn: bool = true
 @export var margin: float = 100

@@ -29,3 +29,4 @@ func change_weapon(weapon):
 	Global.shooting_speed = Global.ship_stats[weapon]["shooting_speed"]
 	Global.spread = Global.ship_stats[weapon]["spread"]
 	Global.bullets_per_shot = Global.ship_stats[weapon]["bullets_per_shot"]
+	Global.bullets_pierce = Global.ship_stats[weapon]["bullets_pierce"]

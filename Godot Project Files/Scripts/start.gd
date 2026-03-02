@@ -17,4 +17,4 @@ func _on_sniper_pressed() -> void:
 	
 func start_game():
 	get_node("/root/Global/GUI/HUD").process_mode = Node.PROCESS_MODE_ALWAYS
-	get_tree().change_scene_to_file("res://Scenes/level.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Technical/level.tscn")
