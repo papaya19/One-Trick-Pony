@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://t6tei14qfrb3"
-path="res://.godot/imported/Overlay Placeholder.png-1730a4ecfa6602779942762d444de0e3.ctex"
+uid="uid://cet7ivckv2qli"
+path="res://.godot/imported/Sprinter.png-36f39160e7c72a33aebe984c151453e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Overlay Placeholder.png"
-dest_files=["res://.godot/imported/Overlay Placeholder.png-1730a4ecfa6602779942762d444de0e3.ctex"]
+source_file="res://Assets/Enemies/Sprinter.png"
+dest_files=["res://.godot/imported/Sprinter.png-36f39160e7c72a33aebe984c151453e5.ctex"]
 
 [params]
 

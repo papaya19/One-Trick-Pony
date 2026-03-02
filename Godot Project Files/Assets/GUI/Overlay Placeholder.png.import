@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ee6luhjtoobn"
-path="res://.godot/imported/ship1.png-87e7c006364f5a140f08d9bd7a066082.ctex"
+uid="uid://t6tei14qfrb3"
+path="res://.godot/imported/Overlay Placeholder.png-dad9599fba302d01fd55d96f9b27c8d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ship1.png"
-dest_files=["res://.godot/imported/ship1.png-87e7c006364f5a140f08d9bd7a066082.ctex"]
+source_file="res://Assets/GUI/Overlay Placeholder.png"
+dest_files=["res://.godot/imported/Overlay Placeholder.png-dad9599fba302d01fd55d96f9b27c8d8.ctex"]
 
 [params]
 

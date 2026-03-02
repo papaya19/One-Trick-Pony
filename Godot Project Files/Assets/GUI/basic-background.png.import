@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpfvoxkapoam1"
-path="res://.godot/imported/newcoin.png-d4d3b34cae9baefcf5680e3a673a50c5.ctex"
+uid="uid://d03g0c4hh3p5o"
+path="res://.godot/imported/basic-background.png-12f533241243f9dfd710c9d24cab384a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/newcoin.png"
-dest_files=["res://.godot/imported/newcoin.png-d4d3b34cae9baefcf5680e3a673a50c5.ctex"]
+source_file="res://Assets/GUI/basic-background.png"
+dest_files=["res://.godot/imported/basic-background.png-12f533241243f9dfd710c9d24cab384a.ctex"]
 
 [params]
 

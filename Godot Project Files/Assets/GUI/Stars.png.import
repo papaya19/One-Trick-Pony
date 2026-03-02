@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cet7ivckv2qli"
-path="res://.godot/imported/Sprinter.png-c916d9d0f1c18599f5f4772245eda3df.ctex"
+uid="uid://cqo57pn2skw40"
+path="res://.godot/imported/Stars.png-7e249d9c7def3f493536548ffa2b6791.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprinter.png"
-dest_files=["res://.godot/imported/Sprinter.png-c916d9d0f1c18599f5f4772245eda3df.ctex"]
+source_file="res://Assets/GUI/Stars.png"
+dest_files=["res://.godot/imported/Stars.png-7e249d9c7def3f493536548ffa2b6791.ctex"]
 
 [params]
 
