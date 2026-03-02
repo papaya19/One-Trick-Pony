@@ -22,4 +22,10 @@ func player_died():
 	get_tree().quit()
 
 func change_weapon(weapon):
-	$Sprite2D.texture = load(str("res://Assets/", weapon, ".png"))
+	$Sprite2D.texture = load(Global.ship_stats[weapon]["texture_file_path"])
+	Global.magazine_size = Global.ship_stats[weapon]["magazine_size"]
+	Global.bullet_damage = Global.ship_stats[weapon]["bullet_damage"]
+	Global.reload_time = Global.ship_stats[weapon]["reload_time"]
+	Global.shooting_speed = Global.ship_stats[weapon]["shooting_speed"]
+	Global.spread = Global.ship_stats[weapon]["spread"]
+	Global.bullets_per_shot = Global.ship_stats[weapon]["bullets_per_shot"]
