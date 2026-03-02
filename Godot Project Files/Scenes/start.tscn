@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://bw4fbt1hanvtw"]
 
 [ext_resource type="Script" uid="uid://dtfietgohox21" path="res://Scripts/start.gd" id="1_3bxa3"]
+[ext_resource type="Texture2D" uid="uid://bypr08k2pwcrx" path="res://Assets/Shotgun.png" id="2_lb6bl"]
+[ext_resource type="Texture2D" uid="uid://d1gnsaex02ltn" path="res://Assets/Assault Rifle.png" id="3_rk01k"]
+[ext_resource type="Texture2D" uid="uid://cv86o8uinux1x" path="res://Assets/Sniper.png" id="4_o3wvq"]
 
 [node name="Start" type="Control" unique_id=579261995]
 process_mode = 3
@@ -44,6 +47,10 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Shotgun"
 
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control/Shotgun" unique_id=251018546]
+scale = Vector2(6, 6)
+texture = ExtResource("2_lb6bl")
+
 [node name="Control2" type="Control" parent="HBoxContainer" unique_id=1315549404]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -63,6 +70,10 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Assault Rifle"
 
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control2/Assault Rifle" unique_id=1467177025]
+scale = Vector2(6, 6)
+texture = ExtResource("3_rk01k")
+
 [node name="Control3" type="Control" parent="HBoxContainer" unique_id=1717639624]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -81,6 +92,10 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Sniper"
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control3/Sniper" unique_id=1651079983]
+scale = Vector2(6, 6)
+texture = ExtResource("4_o3wvq")
 
 [connection signal="pressed" from="HBoxContainer/Control/Shotgun" to="." method="_on_shotgun_pressed"]
 [connection signal="pressed" from="HBoxContainer/Control2/Assault Rifle" to="." method="_on_assult_riffle_pressed"]
