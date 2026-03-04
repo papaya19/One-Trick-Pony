@@ -1,6 +1,6 @@
 extends Node
 
-var ship_stats = {
+var ship_stats: Dictionary = {
 	"Shotgun": {"texture_file_path": "res://Assets/Ships/Shotgun.png", 
 	"magazine_size": 6, "bullet_damage": 30, "reload_time": 1.8, "shooting_speed": 0.8, "spread": 0.3, "bullets_per_shot": 5, "bullets_pierce": false},
 	
@@ -9,8 +9,24 @@ var ship_stats = {
 	
 	"Sniper": {"texture_file_path": "res://Assets/Ships/Sniper.png", 
 	"magazine_size": 3, "bullet_damage": 180, "reload_time": 3.25, "shooting_speed": 1.25, "spread": 0, "bullets_per_shot": 1, "bullets_pierce": true}
-	
 }
+var enemy_stats: Dictionary = {
+	"Basic": {"texture_file_path": "res://Assets/Enemies/Basic.png", "spawn_chance": 15,
+	"speed": 100, "damage": 1, "energy_dropped": 1, "enemy_health": 100, "can_split": false, "can_explode": false},
+	
+	"Sprinter": {"texture_file_path": "res://Assets/Enemies/Sprinter.png", "spawn_chance": 5,
+	"speed": 500, "damage": 1, "energy_dropped": 1, "enemy_health": 100, "can_split": false, "can_explode": false},
+	
+	"Shooter": {"texture_file_path": "res://Assets/Ships/Sniper.png", "spawn_chance": 5,
+	"speed": 100, "damage": 1, "energy_dropped": 1, "enemy_health": 100, "can_split": true, "can_explode": false},
+	
+	"Exploding": {"texture_file_path": "res://Assets/Ships/Sniper.png", "spawn_chance": 5,
+	"speed": 100, "damage": 1, "energy_dropped": 1, "enemy_health": 100, "can_split": false, "can_explode": true},
+	
+	"Sentinal": {"texture_file_path": "res://Assets/Ships/Sniper.png","spawn_chance": 2,
+	"speed": 100, "damage": 2, "energy_dropped": 2, "enemy_health": 500, "can_split": false, "can_explode": false},
+}
+
 
 signal player_take_damage(damage_amount: int)
 signal player_gain_energy(energy_value: int)
@@ -20,6 +36,7 @@ signal player_gain_energy(energy_value: int)
 var reloading: bool = false
 var bullet_count: int = 0
 var player_health: int = 8
+
 var magazine_size: int
 var bullet_damage: int
 var reload_time: float

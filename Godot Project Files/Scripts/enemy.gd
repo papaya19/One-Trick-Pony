@@ -3,6 +3,11 @@ extends Node2D
 const enemy_speed: int = 100
 const energy: PackedScene = preload("res://Scenes/Spawning/energy.tscn")
 var enemy_health: int = 100
+var enemy_type: String
+
+func _ready() -> void:
+	$Sprite2D.texture = load(Global.enemy_stats[enemy_type]["texture_file_path"])
+	
 
 func _process(delta: float) -> void:
 	var direction = global_position.direction_to(get_node("/root/Level/Player").global_position)
@@ -13,7 +18,7 @@ func _on_area_2d_area_entered(body) -> void:
 	if body.is_in_group("bullet"):
 		enemy_take_damage(Global.bullet_damage)
 	if body.is_in_group("player"):
-		Global.player_take_damage.emit(1)
+		Global.player_take_damage.emit(Global.enemy_stats[enemy_type]["damage"])
 		queue_free()
 
 func enemy_take_damage(damage_amount):

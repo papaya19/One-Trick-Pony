@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d2kukq6a11gar"]
 
 [ext_resource type="Script" uid="uid://0q6m4lpfbpch" path="res://Scripts/energy.gd" id="1_gr1ml"]
-[ext_resource type="Texture2D" uid="uid://dpfvoxkapoam1" path="res://Assets/newcoin.png" id="2_401a5"]
+[ext_resource type="Texture2D" uid="uid://b11spxgy18t6h" path="res://Assets/Other/energy.png" id="2_iwdis"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h2p6v"]
 radius = 15.033297
@@ -12,7 +12,7 @@ script = ExtResource("1_gr1ml")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1716805942]
 rotation = 1.5707964
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_401a5")
+texture = ExtResource("2_iwdis")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=289891078]
 shape = SubResource("CircleShape2D_h2p6v")

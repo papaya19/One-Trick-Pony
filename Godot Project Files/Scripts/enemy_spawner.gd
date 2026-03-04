@@ -6,20 +6,27 @@ var enemy_can_spawn: bool = true
 @export var margin: float = 100
 @onready var screen_size: Vector2 = get_viewport_rect().size
 var spawn_pos = Vector2.ZERO
+var enemies: Array = ["Basic", "Sprinter", "Shooter", "Exploding", "Sentinal"]
+var spawning_enemy: String
 
 
 func _process(_delta: float) -> void:
 	if enemy_can_spawn:
 		enemy_can_spawn = false
 		await get_tree().create_timer(enemy_spawn_time).timeout
+		on_wave_start()
 		summon_enemy()
 		enemy_can_spawn = true
 
+func on_wave_start():
+	pass
 
 func summon_enemy():
+	spawning_enemy = enemies[randi_range(0,4)]
 	get_random_coordinates()
 	var enemy_instance = enemy.instantiate()
 	enemy_instance.global_position = spawn_pos
+	enemy_instance.enemy_type = spawning_enemy
 	add_child(enemy_instance)
 	
 
