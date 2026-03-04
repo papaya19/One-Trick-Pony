@@ -11,19 +11,19 @@ var ship_stats: Dictionary = {
 	"magazine_size": 3, "bullet_damage": 180, "reload_time": 3.25, "shooting_speed": 1.25, "spread": 0, "bullets_per_shot": 1, "bullets_pierce": true}
 }
 var enemy_stats: Dictionary = {
-	"Basic": {"texture_file_path": "res://Assets/Enemies/Basic.png", "spawn_chance": 15,
+	"Basic": {"texture_file_path": "res://Assets/Enemies/Basic.png", "spawn_chance": 60,
 	"speed": 100, "damage": 1, "energy_dropped": 1, "health": 100, "can_split": false, "can_explode": false},
 	
-	"Sprinter": {"texture_file_path": "res://Assets/Enemies/Sprinter.png", "spawn_chance": 5,
+	"Sprinter": {"texture_file_path": "res://Assets/Enemies/Sprinter.png", "spawn_chance": 20,
 	"speed": 500, "damage": 1, "energy_dropped": 1, "health": 70, "can_split": false, "can_explode": false},
 	
-	"Shooter": {"texture_file_path": "res://Assets/icon.svg", "spawn_chance": 5,
+	"Shooter": {"texture_file_path": "res://Assets/icon.svg", "spawn_chance": 8,
 	"speed": 100, "damage": 1, "energy_dropped": 1, "health": 100, "can_split": true, "can_explode": false},
 	
-	"Exploding": {"texture_file_path": "res://Assets/icon.svg", "spawn_chance": 5,
+	"Exploding": {"texture_file_path": "res://Assets/icon.svg", "spawn_chance": 8,
 	"speed": 100, "damage": 1, "energy_dropped": 1, "health": 100, "can_split": false, "can_explode": true},
 	
-	"Sentinal": {"texture_file_path": "res://Assets/icon.svg","spawn_chance": 2,
+	"Sentinal": {"texture_file_path": "res://Assets/icon.svg","spawn_chance": 4,
 	"speed": 200, "damage": 2, "energy_dropped": 2, "health": 500, "can_split": false, "can_explode": false},
 }
 

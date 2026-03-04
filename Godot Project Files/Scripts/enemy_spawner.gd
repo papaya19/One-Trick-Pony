@@ -14,21 +14,23 @@ func _process(_delta: float) -> void:
 	if enemy_can_spawn:
 		enemy_can_spawn = false
 		await get_tree().create_timer(enemy_spawn_time).timeout
-		on_wave_start()
 		summon_enemy()
 		enemy_can_spawn = true
 
-func on_wave_start():
-	pass
-
 func summon_enemy():
-	spawning_enemy = enemies[randi_range(0,4)]
+	spawning_enemy = get_random_enemy()
 	get_random_coordinates()
 	var enemy_instance = enemy.instantiate()
 	enemy_instance.global_position = spawn_pos
 	enemy_instance.enemy_type = spawning_enemy
 	add_child(enemy_instance)
-	
+
+func get_random_enemy():
+	var current_sum = 0
+	for enemy_name in Global.enemy_stats:
+		current_sum += Global.enemy_stats[enemy_name]["spawn_chance"]
+		if randi_range(1,100) <= current_sum:
+			return enemy_name
 
 
 func get_random_coordinates():
