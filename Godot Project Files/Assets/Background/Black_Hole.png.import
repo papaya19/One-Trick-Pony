@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpoh6p8hma6ku"
-path="res://.godot/imported/black-hole.png-3d6d91bc45b08a05d309adf82c724350.ctex"
+path="res://.godot/imported/Black_Hole.png-98fffe48e359950e2e8b482f44fb3f63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/black-hole.png"
-dest_files=["res://.godot/imported/black-hole.png-3d6d91bc45b08a05d309adf82c724350.ctex"]
+source_file="res://Assets/Background/Black_Hole.png"
+dest_files=["res://.godot/imported/Black_Hole.png-98fffe48e359950e2e8b482f44fb3f63.ctex"]
 
 [params]
 

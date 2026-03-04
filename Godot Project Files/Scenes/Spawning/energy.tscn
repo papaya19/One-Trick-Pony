@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d2kukq6a11gar"]
 
 [ext_resource type="Script" uid="uid://0q6m4lpfbpch" path="res://Scripts/energy.gd" id="1_gr1ml"]
-[ext_resource type="Texture2D" uid="uid://b11spxgy18t6h" path="res://Assets/Other/energy.png" id="2_iwdis"]
+[ext_resource type="Texture2D" uid="uid://b11spxgy18t6h" path="res://Assets/Other/Energy.png" id="2_iwdis"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h2p6v"]
 radius = 15.033297

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://t6tei14qfrb3"
-path="res://.godot/imported/Overlay Placeholder.png-dad9599fba302d01fd55d96f9b27c8d8.ctex"
+path="res://.godot/imported/Overlay_Placeholder.png-396bd9ecc735059f513c8d60af30037d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GUI/Overlay Placeholder.png"
-dest_files=["res://.godot/imported/Overlay Placeholder.png-dad9599fba302d01fd55d96f9b27c8d8.ctex"]
+source_file="res://Assets/GUI/Overlay_Placeholder.png"
+dest_files=["res://.godot/imported/Overlay_Placeholder.png-396bd9ecc735059f513c8d60af30037d.ctex"]
 
 [params]
 

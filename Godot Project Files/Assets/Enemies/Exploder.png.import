@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b68gtr4mjv2om"
-path="res://.godot/imported/Crosshair.png-98502f2290431eda42753ce408eb8361.ctex"
+uid="uid://dibho5cekhtpp"
+path="res://.godot/imported/Exploder.png-f656ec712e9843758a847fae83c100cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GUI/Crosshair.png"
-dest_files=["res://.godot/imported/Crosshair.png-98502f2290431eda42753ce408eb8361.ctex"]
+source_file="res://Assets/Enemies/Exploder.png"
+dest_files=["res://.godot/imported/Exploder.png-f656ec712e9843758a847fae83c100cf.ctex"]
 
 [params]
 

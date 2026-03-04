@@ -4,7 +4,7 @@ var ship_stats: Dictionary = {
 	"Shotgun": {"texture_file_path": "res://Assets/Ships/Shotgun.png", 
 	"magazine_size": 6, "bullet_damage": 30, "reload_time": 1.8, "shooting_speed": 0.8, "spread": 0.3, "bullets_per_shot": 5, "bullets_pierce": false},
 	
-	"Assault Rifle": {"texture_file_path": "res://Assets/Ships/Assault Rifle.png", 
+	"Assault Rifle": {"texture_file_path": "res://Assets/Ships/Assault_Rifle.png", 
 	"magazine_size": 20, "bullet_damage": 60, "reload_time": 1.3, "shooting_speed": 0.3, "spread": 0, "bullets_per_shot": 1, "bullets_pierce": false},
 	
 	"Sniper": {"texture_file_path": "res://Assets/Ships/Sniper.png", 
@@ -12,19 +12,19 @@ var ship_stats: Dictionary = {
 }
 var enemy_stats: Dictionary = {
 	"Basic": {"texture_file_path": "res://Assets/Enemies/Basic.png", "spawn_chance": 60,
-	"speed": 100, "damage": 1, "energy_dropped": 1, "health": 100, "can_split": false, "can_explode": false},
+	"speed": 100, "damage": 1, "energy_dropped_value": 1, "health": 100, "can_shoot": false, "can_explode": false},
 	
 	"Sprinter": {"texture_file_path": "res://Assets/Enemies/Sprinter.png", "spawn_chance": 20,
-	"speed": 300, "damage": 1, "energy_dropped": 1, "health": 60, "can_split": false, "can_explode": false},
+	"speed": 300, "damage": 1, "energy_dropped_value": 1, "health": 60, "can_shoot": false, "can_explode": false},
 	
-	"Shooter": {"texture_file_path": "res://Assets/icon.svg", "spawn_chance": 8,
-	"speed": 100, "damage": 1, "energy_dropped": 1, "health": 100, "can_split": true, "can_explode": false},
+	"Shooter": {"texture_file_path": "res://Assets/Background/Bigger_Star.png", "spawn_chance": 8,
+	"speed": 100, "damage": 1, "energy_dropped_value": 1, "health": 100, "can_shoot": true, "can_explode": false},
 	
-	"Exploding": {"texture_file_path": "res://Assets/icon.svg", "spawn_chance": 8,
-	"speed": 100, "damage": 1, "energy_dropped": 1, "health": 100, "can_split": false, "can_explode": true},
+	"Exploder": {"texture_file_path": "res://Assets/Enemies/Exploder.png", "spawn_chance": 8,
+	"speed": 100, "damage": 1, "energy_dropped_value": 1, "health": 100, "can_shoot": false, "can_explode": true},
 	
-	"Sentinal": {"texture_file_path": "res://Assets/icon.svg","spawn_chance": 4,
-	"speed": 50, "damage": 2, "energy_dropped": 2, "health": 500, "can_split": false, "can_explode": false},
+	"Sentinal": {"texture_file_path": "res://Assets/Enemies/Sentinal.png","spawn_chance": 4,
+	"speed": 50, "damage": 2, "energy_dropped_value": 3, "health": 500, "can_shoot": false, "can_explode": false},
 }
 
 

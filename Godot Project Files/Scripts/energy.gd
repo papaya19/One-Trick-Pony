@@ -1,6 +1,7 @@
 extends Area2D
 
 var speed: int = 600 #we should make this tween, it would work well
+var energy_value: int
 
 func _process(delta: float) -> void:
 	var direction = global_position.direction_to(get_node("/root/Level/Energy Collector").global_position)
@@ -10,5 +11,5 @@ func _process(delta: float) -> void:
 
 func _on_area_entered(body) -> void:
 	if body.is_in_group("energy_collector"):
-		Global.player_gain_energy.emit(1)
+		Global.player_gain_energy.emit(energy_value)
 		queue_free()

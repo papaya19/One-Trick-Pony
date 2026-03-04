@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b68gtr4mjv2om"
-path="res://.godot/imported/Crosshair.png-98502f2290431eda42753ce408eb8361.ctex"
+uid="uid://obxyh7vt63vn"
+path="res://.godot/imported/Sentinal.png-4a107c0002965af2f87cfe827dc05d5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GUI/Crosshair.png"
-dest_files=["res://.godot/imported/Crosshair.png-98502f2290431eda42753ce408eb8361.ctex"]
+source_file="res://Assets/Enemies/Sentinal.png"
+dest_files=["res://.godot/imported/Sentinal.png-4a107c0002965af2f87cfe827dc05d5c.ctex"]
 
 [params]
 

@@ -5,16 +5,15 @@ var enemy_spawn_time: float = 1.2
 var enemy_can_spawn: bool = true
 @export var margin: float = 100
 @onready var screen_size: Vector2 = get_viewport_rect().size
-var spawn_pos = Vector2.ZERO
-var enemies: Array = ["Basic", "Sprinter", "Shooter", "Exploding", "Sentinal"]
-var spawning_enemy: String
+var spawn_pos: Vector2 = Vector2.ZERO
 
-func _ready() -> void: #temp spawn chnaces
-	Global.enemy_stats["Basic"]["spawn_chance"] = 100
-	Global.enemy_stats["Sprinter"]["spawn_chance"] = 0
-	Global.enemy_stats["Shooter"]["spawn_chance"] = 0
-	Global.enemy_stats["Exploding"]["spawn_chance"] = 0
-	Global.enemy_stats["Sentinal"]["spawn_chance"] = 0
+func _ready() -> void:
+	if true: #temp spawn chnaces chaqnge to true for it to take affect, or false to stop it
+		Global.enemy_stats["Basic"]["spawn_chance"] += Global.enemy_stats["Shooter"]["spawn_chance"]
+		Global.enemy_stats["Sprinter"]["spawn_chance"] 
+		Global.enemy_stats["Shooter"]["spawn_chance"] = 0
+		Global.enemy_stats["Exploder"]["spawn_chance"] 
+		Global.enemy_stats["Sentinal"]["spawn_chance"] 
 
 func _process(_delta: float) -> void:
 	if enemy_can_spawn:
@@ -24,18 +23,18 @@ func _process(_delta: float) -> void:
 		enemy_can_spawn = true
 
 func summon_enemy():
-	spawning_enemy = get_random_enemy()
 	get_random_coordinates()
 	var enemy_instance = enemy.instantiate()
 	enemy_instance.global_position = spawn_pos
-	enemy_instance.enemy_type = spawning_enemy
+	enemy_instance.enemy_type = get_random_enemy()
 	add_child(enemy_instance)
 
 func get_random_enemy():
 	var current_sum = 0
+	var random = randi_range(1,100)
 	for enemy_name in Global.enemy_stats:
 		current_sum += Global.enemy_stats[enemy_name]["spawn_chance"]
-		if randi_range(1,100) <= current_sum:
+		if random <= current_sum:
 			return enemy_name
 
 

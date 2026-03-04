@@ -4,7 +4,7 @@ const energy: PackedScene = preload("res://Scenes/Spawning/energy.tscn")
 var enemy_speed: int
 var enemy_damage: int 
 var enemy_health: int
-var energy_dropped: int
+var energy_dropped_value: int
 var can_split: bool
 var can_explode: bool
 var enemy_type: String
@@ -13,9 +13,9 @@ func _ready() -> void:
 	$Sprite2D.texture = load(Global.enemy_stats[enemy_type]["texture_file_path"])
 	enemy_speed = Global.enemy_stats[enemy_type]["speed"] 
 	enemy_damage = Global.enemy_stats[enemy_type]["damage"] 
-	energy_dropped = Global.enemy_stats[enemy_type]["energy_dropped"] 
+	energy_dropped_value = Global.enemy_stats[enemy_type]["energy_dropped_value"] 
 	enemy_health = Global.enemy_stats[enemy_type]["health"] 
-	can_split = Global.enemy_stats[enemy_type]["can_split"] 
+	can_split = Global.enemy_stats[enemy_type]["can_shoot"] 
 	can_explode = Global.enemy_stats[enemy_type]["can_explode"] 
 
 func _process(delta: float) -> void:
@@ -39,4 +39,5 @@ func enemy_take_damage(damage_amount):
 func spawn_energy():
 	var energy_instance = energy.instantiate()
 	energy_instance.global_position = global_position
+	energy_instance.energy_value = energy_dropped_value
 	get_tree().root.add_child.call_deferred(energy_instance)# this does mean that coin instances 

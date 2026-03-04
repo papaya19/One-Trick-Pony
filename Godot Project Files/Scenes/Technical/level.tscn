@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://dwfpcfxio54y4" path="res://Scenes/Player/gun.tscn" id="1_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://dhi5lmgj3uvww" path="res://Scenes/Player/player.tscn" id="1_tumq0"]
-[ext_resource type="PackedScene" uid="uid://8aq3xri8qeeh" path="res://Scenes/Technical/enemy_spawner.tscn" id="4_81xng"]
+[ext_resource type="PackedScene" uid="uid://c15ot5xsggyjm" path="res://Scenes/Technical/enemy_spawner.tscn" id="4_81xng"]
 [ext_resource type="AudioStream" uid="uid://d0dpfvhddilhj" path="res://Assets/Sounds/Music/sagar sandhra - New Project 2026-02-05 16_27.mp3" id="5_wqkje"]
 [ext_resource type="AudioStream" uid="uid://6b5q0w4tn67c" path="res://Assets/Sounds/Music/sagar sandhra - New Project 2026-02-09 21_01.mp3" id="6_0f350"]
-[ext_resource type="Texture2D" uid="uid://dpt6vregpvdtr" path="res://Assets/Background/basic-background.png" id="6_lhx7y"]
-[ext_resource type="Texture2D" uid="uid://dpoh6p8hma6ku" path="res://Assets/Background/black-hole.png" id="7_i5435"]
+[ext_resource type="Texture2D" uid="uid://dpt6vregpvdtr" path="res://Assets/Background/Basic_Background.png" id="6_lhx7y"]
+[ext_resource type="Texture2D" uid="uid://dpoh6p8hma6ku" path="res://Assets/Background/Black_Hole.png" id="7_i5435"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6phgx"]
 size = Vector2(100, 100)

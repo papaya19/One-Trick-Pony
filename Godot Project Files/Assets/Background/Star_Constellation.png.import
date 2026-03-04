@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bg33ewpavn7wd"
-path="res://.godot/imported/star-constellation.png-b719b641546071dcbf28ea0b68b2db41.ctex"
+path="res://.godot/imported/Star_Constellation.png-fd3a464817291b02da7765e209b9e7bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/star-constellation.png"
-dest_files=["res://.godot/imported/star-constellation.png-b719b641546071dcbf28ea0b68b2db41.ctex"]
+source_file="res://Assets/Background/Star_Constellation.png"
+dest_files=["res://.godot/imported/Star_Constellation.png-fd3a464817291b02da7765e209b9e7bf.ctex"]
 
 [params]
 

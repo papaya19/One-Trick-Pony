@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpt6vregpvdtr"
-path="res://.godot/imported/basic-background.png-aaaf00f0b5d5776fccb4f59b49f6b4cf.ctex"
+uid="uid://d1gnsaex02ltn"
+path="res://.godot/imported/Assault_Rifle.png-041b8330d636e5ade1a140df746fb0e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/basic-background.png"
-dest_files=["res://.godot/imported/basic-background.png-aaaf00f0b5d5776fccb4f59b49f6b4cf.ctex"]
+source_file="res://Assets/Ships/Assault_Rifle.png"
+dest_files=["res://.godot/imported/Assault_Rifle.png-041b8330d636e5ade1a140df746fb0e9.ctex"]
 
 [params]
 

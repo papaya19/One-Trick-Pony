@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dtfietgohox21" path="res://Scripts/start.gd" id="1_3bxa3"]
 [ext_resource type="Texture2D" uid="uid://bypr08k2pwcrx" path="res://Assets/Ships/Shotgun.png" id="2_lb6bl"]
-[ext_resource type="Texture2D" uid="uid://d1gnsaex02ltn" path="res://Assets/Ships/Assault Rifle.png" id="3_rk01k"]
+[ext_resource type="Texture2D" uid="uid://d1gnsaex02ltn" path="res://Assets/Ships/Assault_Rifle.png" id="3_rk01k"]
 [ext_resource type="Texture2D" uid="uid://cv86o8uinux1x" path="res://Assets/Ships/Sniper.png" id="4_o3wvq"]
 
 [node name="Start" type="Control" unique_id=579261995]

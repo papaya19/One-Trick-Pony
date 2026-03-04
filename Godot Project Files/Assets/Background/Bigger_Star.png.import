@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1gnsaex02ltn"
-path="res://.godot/imported/Assault Rifle.png-93ef0866ae86633f70173fb3aa75c6bb.ctex"
+uid="uid://kox0vdhxm406"
+path="res://.godot/imported/Bigger_Star.png-032a3ece6d35d8fa52513a2f5a5e8e3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Ships/Assault Rifle.png"
-dest_files=["res://.godot/imported/Assault Rifle.png-93ef0866ae86633f70173fb3aa75c6bb.ctex"]
+source_file="res://Assets/Background/Bigger_Star.png"
+dest_files=["res://.godot/imported/Bigger_Star.png-032a3ece6d35d8fa52513a2f5a5e8e3b.ctex"]
 
 [params]
 
