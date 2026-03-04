@@ -9,6 +9,12 @@ var spawn_pos = Vector2.ZERO
 var enemies: Array = ["Basic", "Sprinter", "Shooter", "Exploding", "Sentinal"]
 var spawning_enemy: String
 
+func _ready() -> void: #temp spawn chnaces
+	Global.enemy_stats["Basic"]["spawn_chance"] = 100
+	Global.enemy_stats["Sprinter"]["spawn_chance"] = 0
+	Global.enemy_stats["Shooter"]["spawn_chance"] = 0
+	Global.enemy_stats["Exploding"]["spawn_chance"] = 0
+	Global.enemy_stats["Sentinal"]["spawn_chance"] = 0
 
 func _process(_delta: float) -> void:
 	if enemy_can_spawn:

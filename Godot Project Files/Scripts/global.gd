@@ -15,7 +15,7 @@ var enemy_stats: Dictionary = {
 	"speed": 100, "damage": 1, "energy_dropped": 1, "health": 100, "can_split": false, "can_explode": false},
 	
 	"Sprinter": {"texture_file_path": "res://Assets/Enemies/Sprinter.png", "spawn_chance": 20,
-	"speed": 500, "damage": 1, "energy_dropped": 1, "health": 70, "can_split": false, "can_explode": false},
+	"speed": 300, "damage": 1, "energy_dropped": 1, "health": 60, "can_split": false, "can_explode": false},
 	
 	"Shooter": {"texture_file_path": "res://Assets/icon.svg", "spawn_chance": 8,
 	"speed": 100, "damage": 1, "energy_dropped": 1, "health": 100, "can_split": true, "can_explode": false},
@@ -24,7 +24,7 @@ var enemy_stats: Dictionary = {
 	"speed": 100, "damage": 1, "energy_dropped": 1, "health": 100, "can_split": false, "can_explode": true},
 	
 	"Sentinal": {"texture_file_path": "res://Assets/icon.svg","spawn_chance": 4,
-	"speed": 200, "damage": 2, "energy_dropped": 2, "health": 500, "can_split": false, "can_explode": false},
+	"speed": 50, "damage": 2, "energy_dropped": 2, "health": 500, "can_split": false, "can_explode": false},
 }
 
 
