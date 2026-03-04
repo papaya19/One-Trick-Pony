@@ -12,19 +12,19 @@ var ship_stats: Dictionary = {
 }
 var enemy_stats: Dictionary = {
 	"Basic": {"texture_file_path": "res://Assets/Enemies/Basic.png", "spawn_chance": 15,
-	"speed": 100, "damage": 1, "energy_dropped": 1, "enemy_health": 100, "can_split": false, "can_explode": false},
+	"speed": 100, "damage": 1, "energy_dropped": 1, "health": 100, "can_split": false, "can_explode": false},
 	
 	"Sprinter": {"texture_file_path": "res://Assets/Enemies/Sprinter.png", "spawn_chance": 5,
-	"speed": 500, "damage": 1, "energy_dropped": 1, "enemy_health": 100, "can_split": false, "can_explode": false},
+	"speed": 500, "damage": 1, "energy_dropped": 1, "health": 70, "can_split": false, "can_explode": false},
 	
-	"Shooter": {"texture_file_path": "res://Assets/Ships/Sniper.png", "spawn_chance": 5,
-	"speed": 100, "damage": 1, "energy_dropped": 1, "enemy_health": 100, "can_split": true, "can_explode": false},
+	"Shooter": {"texture_file_path": "res://Assets/icon.svg", "spawn_chance": 5,
+	"speed": 100, "damage": 1, "energy_dropped": 1, "health": 100, "can_split": true, "can_explode": false},
 	
-	"Exploding": {"texture_file_path": "res://Assets/Ships/Sniper.png", "spawn_chance": 5,
-	"speed": 100, "damage": 1, "energy_dropped": 1, "enemy_health": 100, "can_split": false, "can_explode": true},
+	"Exploding": {"texture_file_path": "res://Assets/icon.svg", "spawn_chance": 5,
+	"speed": 100, "damage": 1, "energy_dropped": 1, "health": 100, "can_split": false, "can_explode": true},
 	
-	"Sentinal": {"texture_file_path": "res://Assets/Ships/Sniper.png","spawn_chance": 2,
-	"speed": 100, "damage": 2, "energy_dropped": 2, "enemy_health": 500, "can_split": false, "can_explode": false},
+	"Sentinal": {"texture_file_path": "res://Assets/icon.svg","spawn_chance": 2,
+	"speed": 200, "damage": 2, "energy_dropped": 2, "health": 500, "can_split": false, "can_explode": false},
 }
 
 
