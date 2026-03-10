@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://cjq2ciaf80dav"]
 
 [ext_resource type="Texture2D" uid="uid://bypr08k2pwcrx" path="res://Assets/Ships/Shotgun.png" id="1_ohft7"]
-[ext_resource type="Texture2D" uid="uid://d1gnsaex02ltn" path="res://Assets/Ships/Assault_Rifle.png" id="2_wdjdp"]
-[ext_resource type="Texture2D" uid="uid://cv86o8uinux1x" path="res://Assets/Ships/Sniper.png" id="3_n8qvg"]
 
 [node name="Upgrades" type="Control" unique_id=2107645213]
 layout_mode = 3
@@ -40,7 +38,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Shotgun"
 
-[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control/Shotgun" unique_id=820547201]
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control/Shotgun" unique_id=1248939590]
 scale = Vector2(6, 6)
 texture = ExtResource("1_ohft7")
 
@@ -63,9 +61,9 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Assault Rifle"
 
-[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control2/Assault Rifle" unique_id=1185009145]
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control2/Assault Rifle" unique_id=926884172]
 scale = Vector2(6, 6)
-texture = ExtResource("2_wdjdp")
+texture = ExtResource("1_ohft7")
 
 [node name="Control3" type="Control" parent="HBoxContainer" unique_id=606603185]
 layout_mode = 2
@@ -86,6 +84,6 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Sniper"
 
-[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control3/Sniper" unique_id=337066998]
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control3/Sniper" unique_id=1844947105]
 scale = Vector2(6, 6)
-texture = ExtResource("3_n8qvg")
+texture = ExtResource("1_ohft7")
