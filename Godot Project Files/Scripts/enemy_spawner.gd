@@ -1,7 +1,7 @@
 extends Node2D
 
 const enemy: PackedScene  = preload("res://Scenes/Spawning/enemy.tscn")
-var enemy_spawn_time: float = 1.2
+var enemy_spawn_time: float = 1.4
 var enemy_can_spawn: bool = true
 @export var margin: float = 100
 @onready var screen_size: Vector2 = get_viewport_rect().size
@@ -10,10 +10,10 @@ var spawn_pos: Vector2 = Vector2.ZERO
 func _ready() -> void:
 	if true: #temp spawn chnaces chaqnge to true for it to take affect, or false to stop it
 		Global.enemy_stats["Basic"]["spawn_chance"] += Global.enemy_stats["Shooter"]["spawn_chance"]
-		Global.enemy_stats["Sprinter"]["spawn_chance"] 
+		Global.enemy_stats["Sprinter"]["spawn_chance"]
 		Global.enemy_stats["Shooter"]["spawn_chance"] = 0
-		Global.enemy_stats["Exploder"]["spawn_chance"] 
-		Global.enemy_stats["Sentinal"]["spawn_chance"] 
+		Global.enemy_stats["Exploder"]["spawn_chance"]
+		Global.enemy_stats["Sentinal"]["spawn_chance"]
 
 func _process(_delta: float) -> void:
 	if enemy_can_spawn:
