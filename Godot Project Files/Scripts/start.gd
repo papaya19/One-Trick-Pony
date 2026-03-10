@@ -1,7 +1,9 @@
 extends Control
 
-func _ready() -> void:
-	pass
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("GOD"):
+		Global.selected_weapon = "GOD"
+		start_game()
 
 func _on_shotgun_pressed() -> void:
 	Global.selected_weapon = $HBoxContainer/Control/Shotgun.text
