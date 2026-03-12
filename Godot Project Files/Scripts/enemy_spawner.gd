@@ -1,32 +1,49 @@
 extends Node2D
 
 const enemy: PackedScene  = preload("res://Scenes/Spawning/enemy.tscn")
-var enemy_spawn_time: float = 1.4
 var enemy_can_spawn: bool = true
 @export var margin: float = 100
 @onready var screen_size: Vector2 = get_viewport_rect().size
 var spawn_pos: Vector2 = Vector2.ZERO
+var enemies_spawned: int
+var enemies_to_spawn: int = 10
+var wave_multiplier = 0.5
+var wave_active: bool
 
-func _ready() -> void:
-	if true: #temp spawn chnaces chaqnge to true for it to take affect, or false to stop it
-		Global.enemy_stats["Basic"]["spawn_chance"] += Global.enemy_stats["Shooter"]["spawn_chance"]
-		Global.enemy_stats["Sprinter"]["spawn_chance"]
-		Global.enemy_stats["Shooter"]["spawn_chance"] = 0
-		Global.enemy_stats["Exploder"]["spawn_chance"]
-		Global.enemy_stats["Sentinal"]["spawn_chance"]
 
 func _process(_delta: float) -> void:
 	if enemy_can_spawn:
 		enemy_can_spawn = false
-		await get_tree().create_timer(enemy_spawn_time).timeout
+		await get_tree().create_timer(Global.enemy_spawn_time).timeout
 		summon_enemy()
 		enemy_can_spawn = true
+		enemies_spawned += 1
+		wave_active = true
+
+	if enemies_spawned >= enemies_to_spawn:
+		enemy_can_spawn = false
+
+	if get_node("/root/Level/Enemy Spawner").get_child_count() == 0 and wave_active:
+		wave_finished()
+
+
+func wave_finished():
+	wave_active = false
+	Global.current_wave += 1
+	#do something with upgrades
+	Global.bullet_count = Global.magazine_size
+	await get_tree().create_timer(3).timeout
+	enemies_to_spawn += Global.current_wave * wave_multiplier
+	Global.enemy_spawn_time -= Global.current_wave * pow(wave_multiplier, 4)
+	enemies_spawned = 0
+	enemy_can_spawn = true
 
 func summon_enemy():
 	get_random_coordinates()
+	var enemy_type = get_random_enemy()
 	var enemy_instance = enemy.instantiate()
 	enemy_instance.global_position = spawn_pos
-	enemy_instance.enemy_type = get_random_enemy()
+	enemy_instance.enemy_type = enemy_type
 	add_child(enemy_instance)
 
 func get_random_enemy():
