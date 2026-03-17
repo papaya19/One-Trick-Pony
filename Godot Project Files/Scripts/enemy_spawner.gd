@@ -3,7 +3,6 @@ extends Node2D
 const enemy: PackedScene  = preload("res://Scenes/Spawning/enemy.tscn")
 var enemy_can_spawn: bool = true
 @export var margin: float = 100
-@onready var screen_size: Vector2 = get_viewport_rect().size
 var spawn_pos: Vector2 = Vector2.ZERO
 var enemies_spawned: int
 var enemies_to_spawn: int = 10
@@ -30,6 +29,8 @@ func _process(_delta: float) -> void:
 func wave_finished():
 	wave_active = false
 	Global.current_wave += 1
+	if Global.current_wave == 10:
+		print("You win")
 	#do something with upgrades
 	Global.bullet_count = Global.magazine_size
 	await get_tree().create_timer(3).timeout
@@ -60,14 +61,14 @@ func get_random_coordinates():
 	
 	match side:
 		0: # Top
-			spawn_pos.x = randf_range(margin, screen_size.x - margin)
+			spawn_pos.x = randf_range(margin, Global.screen_size.x - margin)
 			spawn_pos.y = margin
 		1: # Bottom
-			spawn_pos.x = randf_range(margin, screen_size.x - margin)
-			spawn_pos.y = screen_size.y - margin
+			spawn_pos.x = randf_range(margin, Global.screen_size.x - margin)
+			spawn_pos.y = Global.screen_size.y - margin
 		2: # Left
 			spawn_pos.x = margin
-			spawn_pos.y = randf_range(margin, screen_size.y - margin)
+			spawn_pos.y = randf_range(margin, Global.screen_size.y - margin)
 		3: # Right
-			spawn_pos.x = screen_size.x - margin
-			spawn_pos.y = randf_range(margin, screen_size.y - margin)
+			spawn_pos.x = Global.screen_size.x - margin
+			spawn_pos.y = randf_range(margin, Global.screen_size.y - margin)
