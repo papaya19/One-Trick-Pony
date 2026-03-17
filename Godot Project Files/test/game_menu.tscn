@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cfvyui0q4mpxb"]
 
-[ext_resource type="Script" uid="uid://dj7rqrfqr20rn" path="res://Game_Menu_Import/game_menu.gd" id="1_gvxyv"]
-[ext_resource type="Shader" uid="uid://ckj87533twg0k" path="res://Game_Menu_Import/blur.gdshader" id="2_gysth"]
-[ext_resource type="Shader" uid="uid://4h7dq15suvkc" path="res://Game_Menu_Import/rainbow.gdshader" id="3_wqqiw"]
+[ext_resource type="Script" uid="uid://dj7rqrfqr20rn" path="res://test/game_menu.gd" id="1_gvxyv"]
+[ext_resource type="Shader" uid="uid://ckj87533twg0k" path="res://test/blur.gdshader" id="2_gysth"]
+[ext_resource type="Shader" uid="uid://4h7dq15suvkc" path="res://test/rainbow.gdshader" id="3_wqqiw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jkth0"]
 shader = ExtResource("2_gysth")

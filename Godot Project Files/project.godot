@@ -13,6 +13,7 @@ config_version=5
 config/name="onetrickpony"
 run/main_scene="uid://bw4fbt1hanvtw"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://Assets/icon.svg"
 
 [autoload]
@@ -68,3 +69,5 @@ menu={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+environment/bg_color=Color(0, 0, 0, 1)

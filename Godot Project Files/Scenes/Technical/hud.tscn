@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://t6tei14qfrb3" path="res://Assets/GUI/Overlay_Placeholder.png" id="1_e0onf"]
 [ext_resource type="Script" uid="uid://hy7d77ks51tc" path="res://Scripts/hud.gd" id="1_fccik"]
 [ext_resource type="Texture2D" uid="uid://becijvdxnmhw" path="res://Assets/GUI/Healthbar.png" id="3_bjfho"]
+[ext_resource type="PackedScene" uid="uid://buw5f61ejdfmn" path="res://test/node_2d.tscn" id="4_ye7sr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6fbih"]
 atlas = ExtResource("3_bjfho")
@@ -126,3 +127,7 @@ offset_top = 64.0
 offset_right = 172.0
 offset_bottom = 87.0
 text = "Wave = Null"
+
+[node name="Node2D" parent="." unique_id=456276581 instance=ExtResource("4_ye7sr")]
+position = Vector2(1239.0001, 22.000004)
+scale = Vector2(0.1, 0.1)
