@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dy87f3qthgth2"
-path="res://.godot/imported/shotgun-startcard.png-ce31d03636a9efa29b6f04acd6aacdb2.ctex"
+path="res://.godot/imported/Shotgun_Card.png-8c44589cc9a922b9913ce56ef4adb1dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Other/shotgun-startcard.png"
-dest_files=["res://.godot/imported/shotgun-startcard.png-ce31d03636a9efa29b6f04acd6aacdb2.ctex"]
+source_file="res://Assets/GUI/Shotgun_Card.png"
+dest_files=["res://.godot/imported/Shotgun_Card.png-8c44589cc9a922b9913ce56ef4adb1dd.ctex"]
 
 [params]
 

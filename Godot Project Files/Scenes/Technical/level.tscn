@@ -16,7 +16,7 @@ size = Vector2(100, 100)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7ah66"]
 playback_mode = 1
-random_pitch = 1.4983071
+random_pitch = 1.122462
 streams_count = 4
 stream_0/stream = ExtResource("5_wqkje")
 stream_1/stream = ExtResource("6_0f350")
@@ -110,7 +110,7 @@ shape = SubResource("RectangleShape2D_6phgx")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1715037561]
 stream = SubResource("AudioStreamRandomizer_7ah66")
 autoplay = true
-mix_target = 2
+mix_target = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1439531429]
 layer = -1

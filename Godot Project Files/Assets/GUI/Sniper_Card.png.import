@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbrrs2cg5ql6f"
-path="res://.godot/imported/sniper-stARtcard-real.png-900e3c606f3b677a0339c8414712f605.ctex"
+uid="uid://rvgblb2yxe4o"
+path="res://.godot/imported/Sniper_Card.png-e104b077e0acade967e8951f476d7871.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Other/sniper-stARtcard-real.png"
-dest_files=["res://.godot/imported/sniper-stARtcard-real.png-900e3c606f3b677a0339c8414712f605.ctex"]
+source_file="res://Assets/GUI/Sniper_Card.png"
+dest_files=["res://.godot/imported/Sniper_Card.png-e104b077e0acade967e8951f476d7871.ctex"]
 
 [params]
 
