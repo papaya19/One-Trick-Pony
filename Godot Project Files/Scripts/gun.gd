@@ -25,6 +25,7 @@ func _process(_delta: float) -> void:
 
 func shoot(offset):
 	var bullet_instance = bullet.instantiate()
-	get_tree().root.add_child(bullet_instance)
+	bullet_instance.bullet_type = "player_bullet"
 	bullet_instance.global_position = global_position
 	bullet_instance.rotation = rotation + offset
+	get_tree().root.add_child(bullet_instance)

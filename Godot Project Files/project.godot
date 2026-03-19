@@ -31,12 +31,13 @@ mouse_cursor/custom_image_hotspot=Vector2(16, 16)
 
 [global_group]
 
-bullet=""
 player=""
 enemy=""
 coin=""
 energy_collector=""
 explosion=""
+enemy_bullet=""
+player_bullet=""
 
 [input]
 

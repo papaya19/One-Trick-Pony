@@ -3,25 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://dwfpcfxio54y4" path="res://Scenes/Player/gun.tscn" id="1_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://dhi5lmgj3uvww" path="res://Scenes/Player/player.tscn" id="1_tumq0"]
 [ext_resource type="PackedScene" uid="uid://c15ot5xsggyjm" path="res://Scenes/Technical/enemy_spawner.tscn" id="4_81xng"]
-[ext_resource type="AudioStream" uid="uid://d0dpfvhddilhj" path="res://Assets/Sounds/Music/sagar sandhra - New Project 2026-02-05 16_27.mp3" id="5_wqkje"]
-[ext_resource type="AudioStream" uid="uid://6b5q0w4tn67c" path="res://Assets/Sounds/Music/sagar sandhra - New Project 2026-02-09 21_01.mp3" id="6_0f350"]
-[ext_resource type="AudioStream" uid="uid://dmeb8nt8bk830" path="res://Assets/Sounds/Music/2026-03-17T03_57_05.313Z.wav" id="6_7ah66"]
+[ext_resource type="Script" uid="uid://v465i0ic0kkc" path="res://Scripts/music_player.gd" id="4_oqrs4"]
 [ext_resource type="Texture2D" uid="uid://dldny1656jdcn" path="res://Assets/Background/Star_Spritesheet.png" id="6_oqrs4"]
-[ext_resource type="AudioStream" uid="uid://dev0kfble7vei" path="res://Assets/Sounds/Music/thestrudelsong.wav" id="7_7ygvc"]
 [ext_resource type="Texture2D" uid="uid://dpoh6p8hma6ku" path="res://Assets/Background/Black_Hole.png" id="7_i5435"]
 [ext_resource type="Script" uid="uid://bl6k15c2rsw4o" path="res://Scripts/random_stars.gd" id="7_o6vcw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6phgx"]
 size = Vector2(100, 100)
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7ah66"]
-playback_mode = 1
-random_pitch = 1.122462
-streams_count = 4
-stream_0/stream = ExtResource("5_wqkje")
-stream_1/stream = ExtResource("6_0f350")
-stream_2/stream = ExtResource("7_7ygvc")
-stream_3/stream = ExtResource("6_7ah66")
+[sub_resource type="AudioStream" id="AudioStream_o6vcw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o6vcw"]
 texture = ExtResource("6_oqrs4")
@@ -108,9 +98,10 @@ position = Vector2(2560, 0)
 shape = SubResource("RectangleShape2D_6phgx")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1715037561]
-stream = SubResource("AudioStreamRandomizer_7ah66")
+stream = SubResource("AudioStream_o6vcw")
 autoplay = true
 mix_target = 1
+script = ExtResource("4_oqrs4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1439531429]
 layer = -1
