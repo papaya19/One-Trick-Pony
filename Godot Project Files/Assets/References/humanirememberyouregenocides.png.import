@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dntjrgtpd8xa0"
-path="res://.godot/imported/Shotgun_Card.png-8c44589cc9a922b9913ce56ef4adb1dd.ctex"
+uid="uid://cv1vyjixp8ntw"
+path="res://.godot/imported/humanirememberyouregenocides.png-b8b1f1b9695bc3ad396e3af7e56404d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GUI/Shotgun_Card.png"
-dest_files=["res://.godot/imported/Shotgun_Card.png-8c44589cc9a922b9913ce56ef4adb1dd.ctex"]
+source_file="res://Assets/References/humanirememberyouregenocides.png"
+dest_files=["res://.godot/imported/humanirememberyouregenocides.png-b8b1f1b9695bc3ad396e3af7e56404d8.ctex"]
 
 [params]
 

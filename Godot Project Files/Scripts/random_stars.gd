@@ -21,7 +21,6 @@ func _ready():
 	noise_tex.width = 2560
 	noise_tex.height = 1664
 	noise_tex.noise = noise
-	get_node("/root/Global/GUI/TextureRect").texture = noise_tex
 	Global.test = true
 
 func generate_galaxy():

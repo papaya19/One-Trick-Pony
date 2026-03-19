@@ -3,7 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://t6tei14qfrb3" path="res://Assets/GUI/Overlay_Placeholder.png" id="1_e0onf"]
 [ext_resource type="Script" uid="uid://hy7d77ks51tc" path="res://Scripts/hud.gd" id="1_fccik"]
 [ext_resource type="Texture2D" uid="uid://becijvdxnmhw" path="res://Assets/GUI/Healthbar.png" id="3_bjfho"]
-[ext_resource type="PackedScene" uid="uid://buw5f61ejdfmn" path="res://test/node_2d.tscn" id="4_ye7sr"]
+[ext_resource type="Texture2D" uid="uid://b11spxgy18t6h" path="res://Assets/Other/Energy.png" id="4_qtcwj"]
+[ext_resource type="Texture2D" uid="uid://dy6jyec2oqbfo" path="res://Assets/Enemies/Basic.png" id="5_bgrxv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6fbih"]
 atlas = ExtResource("3_bjfho")
@@ -108,6 +109,7 @@ offset_left = 60.0
 offset_top = 1574.0
 offset_right = 152.0
 offset_bottom = 1597.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
 text = "Ammo: Null"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -118,16 +120,34 @@ offset_left = 2396.0
 offset_top = 70.0
 offset_right = 2489.0
 offset_bottom = 93.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
 text = "Energy: Null"
 
 [node name="Wave" type="Label" parent="." unique_id=1437511696]
 layout_mode = 0
-offset_left = 80.0
-offset_top = 64.0
-offset_right = 172.0
-offset_bottom = 87.0
+offset_left = 171.0
+offset_top = 67.0
+offset_right = 263.0
+offset_bottom = 90.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
 text = "Wave = Null"
 
-[node name="Node2D" parent="." unique_id=456276581 instance=ExtResource("4_ye7sr")]
-position = Vector2(1239.0001, 22.000004)
-scale = Vector2(0.1, 0.1)
+[node name="Energy" type="Sprite2D" parent="." unique_id=1809905083]
+position = Vector2(2314, 80)
+texture = ExtResource("4_qtcwj")
+
+[node name="Bullet" type="ColorRect" parent="." unique_id=1692750713]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 1562.0
+offset_right = 51.0
+offset_bottom = 1611.5991
+rotation = 1.5707964
+scale = Vector2(2, 1)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(0, 1, 0, 1)
+
+[node name="Basic" type="Sprite2D" parent="." unique_id=1004266707]
+position = Vector2(78, 85)
+scale = Vector2(4, 4)
+texture = ExtResource("5_bgrxv")

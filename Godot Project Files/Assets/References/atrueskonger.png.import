@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dntjrgtpd8xa0"
-path="res://.godot/imported/Shotgun_Card.png-8c44589cc9a922b9913ce56ef4adb1dd.ctex"
+uid="uid://d0ppyewfomncs"
+path="res://.godot/imported/atrueskonger.png-b8cfe50fa6060872e186c9650c8314c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GUI/Shotgun_Card.png"
-dest_files=["res://.godot/imported/Shotgun_Card.png-8c44589cc9a922b9913ce56ef4adb1dd.ctex"]
+source_file="res://Assets/References/atrueskonger.png"
+dest_files=["res://.godot/imported/atrueskonger.png-b8cfe50fa6060872e186c9650c8314c6.ctex"]
 
 [params]
 

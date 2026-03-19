@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmsgrfquv2v34"
-path="res://.godot/imported/hollow Knight Reference.png-b6783a4f59eca254bf958eab5e650cd1.ctex"
+uid="uid://c5jqypf68y1nr"
+path="res://.godot/imported/tetrys.png-af783104b2482fab0803a8f6d1930cbf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GUI/hollow Knight Reference.png"
-dest_files=["res://.godot/imported/hollow Knight Reference.png-b6783a4f59eca254bf958eab5e650cd1.ctex"]
+source_file="res://Assets/References/tetrys.png"
+dest_files=["res://.godot/imported/tetrys.png-af783104b2482fab0803a8f6d1930cbf.ctex"]
 
 [params]
 
