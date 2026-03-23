@@ -11,8 +11,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6phgx"]
 size = Vector2(100, 100)
 
-[sub_resource type="AudioStream" id="AudioStream_o6vcw"]
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o6vcw"]
 texture = ExtResource("6_oqrs4")
 texture_region_size = Vector2i(3, 3)
@@ -97,12 +95,6 @@ position = Vector2(2560, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Energy Collector" unique_id=2062352886]
 shape = SubResource("RectangleShape2D_6phgx")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1715037561]
-stream = SubResource("AudioStream_o6vcw")
-autoplay = true
-mix_target = 1
-script = ExtResource("4_oqrs4")
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1439531429]
 layer = -1
 follow_viewport_enabled = true
@@ -116,3 +108,8 @@ modulate = Color(1, 1, 1, 0.8039216)
 position = Vector2(788, 401)
 scale = Vector2(4, 4)
 texture = ExtResource("7_i5435")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=925525577]
+script = ExtResource("4_oqrs4")
+
+[connection signal="finished" from="AudioStreamPlayer" to="AudioStreamPlayer" method="_on_finished"]
