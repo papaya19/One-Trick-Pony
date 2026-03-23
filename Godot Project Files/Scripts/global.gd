@@ -16,19 +16,19 @@ var ship_stats: Dictionary = {
 	"magazine_size": -1, "bullet_damage": 1000, "reload_time": 0, "shooting_speed": 0, "spread": 360, "bullets_per_shot": 100, "bullets_pierce": true}
 }
 var enemy_stats: Dictionary = {
-	"Basic": {"texture_file_path": "res://Assets/Enemies/Basic.png", "spawn_chance": 60,
+	"Basic": {"texture_file_path": "res://Assets/Enemies/Basic.png", "death_particles_file_path": "res://Assets/Death/Basic_Death.png", "spawn_chance": 60,
 	"speed": 100, "damage": 1, "energy_dropped_value": 1, "health": 100, "scale": Vector2(1,1), "can_shoot": false, "can_explode": false},
 	
-	"Sprinter": {"texture_file_path": "res://Assets/Enemies/Sprinter.png", "spawn_chance": 20,
+	"Sprinter": {"texture_file_path": "res://Assets/Enemies/Sprinter.png", "death_particles_file_path": "res://Assets/Death/Sprinter_Death.png", "spawn_chance": 20,
 	"speed": 300, "damage": 1, "energy_dropped_value": 1, "health": 60, "scale": Vector2(1,1), "can_shoot": false, "can_explode": false},
 	
-	"Shooter": {"texture_file_path": "res://Assets/Enemies/Shooter.png", "spawn_chance": 8,
+	"Shooter": {"texture_file_path": "res://Assets/Enemies/Shooter.png", "death_particles_file_path": "res://Assets/Death/Shooter_Death.png", "spawn_chance": 8,
 	"speed": 100, "damage": 1, "energy_dropped_value": 1, "health": 100, "scale": Vector2(1,1), "can_shoot": true, "can_explode": false},
 	
-	"Exploder": {"texture_file_path": "res://Assets/Enemies/Exploder.png", "spawn_chance": 8,
+	"Exploder": {"texture_file_path": "res://Assets/Enemies/Exploder.png", "death_particles_file_path": "res://Assets/Death/Exploder_Death.png", "spawn_chance": 8,
 	"speed": 100, "damage": 1, "energy_dropped_value": 1, "health": 100, "scale": Vector2(1,1), "can_shoot": false, "can_explode": true},
 	
-	"Sentinal": {"texture_file_path": "res://Assets/Enemies/Sentinal.png","spawn_chance": 4,
+	"Sentinel": {"texture_file_path": "res://Assets/Enemies/Sentinel.png", "death_particles_file_path": "res://Assets/Death/Sentinel_Death.png","spawn_chance": 4,
 	"speed": 50, "damage": 2, "energy_dropped_value": 3, "health": 500, "scale": Vector2(2,2), "can_shoot": false, "can_explode": false},
 }
 

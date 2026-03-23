@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2ykc38tm71tf"
-path="res://.godot/imported/sentinel-dead.png-15f20f7e7c2ce3f9319f0f04cdb7e0c0.ctex"
+path="res://.godot/imported/Sentinel_Death.png-773cbde10dac59a2860dd122147d88b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Death/sentinel-dead.png"
-dest_files=["res://.godot/imported/sentinel-dead.png-15f20f7e7c2ce3f9319f0f04cdb7e0c0.ctex"]
+source_file="res://Assets/Death/Sentinel_Death.png"
+dest_files=["res://.godot/imported/Sentinel_Death.png-773cbde10dac59a2860dd122147d88b5.ctex"]
 
 [params]
 

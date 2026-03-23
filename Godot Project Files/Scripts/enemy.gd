@@ -14,6 +14,8 @@ var enemy_type: String
 func _ready() -> void:
 	look_at(get_node("/root/Level/Player").global_position)
 	$Sprite2D.texture = load(Global.enemy_stats[enemy_type]["texture_file_path"])
+	$CPUParticles2D.texture = load(Global.enemy_stats[enemy_type]["death_particles_file_path"])
+	$CPUParticles2D.amount = Global.enemy_stats[enemy_type]["health"] 
 	$".".scale = Global.enemy_stats[enemy_type]["scale"]
 	enemy_speed = Global.enemy_stats[enemy_type]["speed"] 
 	enemy_damage = Global.enemy_stats[enemy_type]["damage"] 
@@ -46,8 +48,13 @@ func enemy_take_damage(damage_amount):
 	if enemy_health <= 0:
 		if can_explode:
 			explode()
-		queue_free()
+		$CPUParticles2D.emitting = true
+		set_physics_process(false)
+		$Sprite2D.hide()
+		$Area2D/CollisionShape2D.set_deferred("disabled", true)
 		spawn_energy()
+		await get_tree().create_timer($CPUParticles2D.lifetime).timeout
+		queue_free()
 
 func spawn_energy():
 	var energy_instance = energy.instantiate()
