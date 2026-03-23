@@ -5,7 +5,8 @@ var energy_value: int
 
 func _ready() -> void:
 	look_at(get_node("/root/Level/Energy Collector").global_position)
-	create_tween().tween_property(self, "position", get_node("/root/Level/Energy Collector").position, speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	var tween = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	tween.tween_property(self, "position", get_node("/root/Level/Energy Collector").position, speed)
 
 
 func _on_area_entered(body) -> void:
