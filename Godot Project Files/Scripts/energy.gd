@@ -1,12 +1,11 @@
 extends Area2D
 
-var speed: int = 600 #we should make this tween, it would work well
+var speed: int = 2.5
 var energy_value: int
 
-func _process(delta: float) -> void:
-	var direction = global_position.direction_to(get_node("/root/Level/Energy Collector").global_position)
-	position += direction * speed * delta
+func _ready() -> void:
 	look_at(get_node("/root/Level/Energy Collector").global_position)
+	create_tween().tween_property(self, "position", get_node("/root/Level/Energy Collector").position, speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
 
 
 func _on_area_entered(body) -> void:
