@@ -27,7 +27,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var direction = global_position.direction_to(get_node("/root/Level/Player").global_position)
 	position += direction * enemy_speed * delta
-	if can_shoot and global_position.distance_to(get_node("/root/Level/Player").global_position) < 400:
+	if can_shoot and global_position.distance_to(get_node("/root/Level/Player").global_position) < 300:
 		can_shoot = false
 		enemy_speed = 0
 		shoot()
@@ -50,6 +50,7 @@ func enemy_take_damage(damage_amount):
 			explode()
 		$CPUParticles2D.emitting = true
 		set_physics_process(false)
+		can_shoot = false
 		$Sprite2D.hide()
 		$Area2D/CollisionShape2D.set_deferred("disabled", true)
 		spawn_energy()
