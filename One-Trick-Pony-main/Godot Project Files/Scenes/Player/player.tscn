@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dhi5lmgj3uvww"]
+
+[ext_resource type="Script" uid="uid://dh4xohpt6wg5b" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://d1gnsaex02ltn" path="res://Assets/Ships/Assault_Rifle.png" id="2_cvnsp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vgqql"]
+radius = 63.126858
+
+[node name="Player" type="Node2D" unique_id=113054380 groups=["player"]]
+script = ExtResource("1_cvnsp")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2139372548]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=892038566]
+rotation = 1.5707964
+scale = Vector2(4, 4)
+texture = ExtResource("2_cvnsp")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1550033373 groups=["player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1520156134]
+shape = SubResource("CircleShape2D_vgqql")

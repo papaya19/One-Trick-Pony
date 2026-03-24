@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0dpfvhddilhj"
+path="res://.godot/imported/sagar sandhra - New Project 2026-02-05 16_27.mp3-1f448ddc8d03cf77cec0edfbfff5904c.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Music/sagar sandhra - New Project 2026-02-05 16_27.mp3"
+dest_files=["res://.godot/imported/sagar sandhra - New Project 2026-02-05 16_27.mp3-1f448ddc8d03cf77cec0edfbfff5904c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

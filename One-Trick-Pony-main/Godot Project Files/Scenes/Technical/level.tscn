@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://bf7bvhggticbd"]
+
+[ext_resource type="PackedScene" uid="uid://dwfpcfxio54y4" path="res://Scenes/Player/gun.tscn" id="1_k5f4k"]
+[ext_resource type="PackedScene" uid="uid://dhi5lmgj3uvww" path="res://Scenes/Player/player.tscn" id="1_tumq0"]
+[ext_resource type="PackedScene" uid="uid://c15ot5xsggyjm" path="res://Scenes/Technical/enemy_spawner.tscn" id="4_81xng"]
+[ext_resource type="Script" uid="uid://v465i0ic0kkc" path="res://Scripts/music_player.gd" id="4_oqrs4"]
+[ext_resource type="Texture2D" uid="uid://dldny1656jdcn" path="res://Assets/Background/Star_Spritesheet.png" id="6_oqrs4"]
+[ext_resource type="Texture2D" uid="uid://dpoh6p8hma6ku" path="res://Assets/Background/Black_Hole.png" id="7_i5435"]
+[ext_resource type="Script" uid="uid://bl6k15c2rsw4o" path="res://Scripts/random_stars.gd" id="7_o6vcw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6phgx"]
+size = Vector2(100, 100)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o6vcw"]
+texture = ExtResource("6_oqrs4")
+texture_region_size = Vector2i(3, 3)
+1:2/0 = 0
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:1/0 = 0
+3:1/0 = 0
+3:2/0 = 0
+2:2/0 = 0
+1:1/0 = 0
+4:0/0 = 0
+4:2/0 = 0
+4:3/0 = 0
+3:3/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+2:4/0 = 0
+1:4/0 = 0
+0:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+3:5/0 = 0
+2:5/0 = 0
+1:5/0 = 0
+0:5/0 = 0
+4:5/0 = 0
+4:6/0 = 0
+3:6/0 = 0
+2:6/0 = 0
+1:6/0 = 0
+0:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+4:8/0 = 0
+3:8/0 = 0
+2:8/0 = 0
+1:8/0 = 0
+0:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+2:10/0 = 0
+1:10/0 = 0
+0:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+4:11/0 = 0
+3:11/0 = 0
+2:11/0 = 0
+1:11/0 = 0
+0:11/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_km207"]
+tile_size = Vector2i(3, 3)
+sources/0 = SubResource("TileSetAtlasSource_o6vcw")
+
+[node name="Level" type="Node2D" unique_id=1152983213]
+
+[node name="Gun" parent="." unique_id=961834057 instance=ExtResource("1_k5f4k")]
+position = Vector2(1280, 832)
+
+[node name="Player" parent="." unique_id=1840420532 instance=ExtResource("1_tumq0")]
+position = Vector2(1280, 813)
+
+[node name="Enemy Spawner" parent="." unique_id=1916731149 instance=ExtResource("4_81xng")]
+
+[node name="Energy Collector" type="Area2D" parent="." unique_id=1986036522 groups=["energy_collector"]]
+position = Vector2(2560, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Energy Collector" unique_id=2062352886]
+shape = SubResource("RectangleShape2D_6phgx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1439531429]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="CanvasLayer" unique_id=14258436]
+tile_set = SubResource("TileSet_km207")
+script = ExtResource("7_o6vcw")
+
+[node name="BlackHole" type="Sprite2D" parent="CanvasLayer" unique_id=1545878363]
+modulate = Color(1, 1, 1, 0.8039216)
+position = Vector2(788, 401)
+scale = Vector2(4, 4)
+texture = ExtResource("7_i5435")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=925525577]
+script = ExtResource("4_oqrs4")
+
+[connection signal="finished" from="AudioStreamPlayer" to="AudioStreamPlayer" method="_on_finished"]

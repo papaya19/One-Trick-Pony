@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://xemiier5q1s5"]
+
+[ext_resource type="Texture2D" uid="uid://t6tei14qfrb3" path="res://Assets/GUI/Overlay_Placeholder.png" id="1_e0onf"]
+[ext_resource type="Script" uid="uid://hy7d77ks51tc" path="res://Scripts/hud.gd" id="1_fccik"]
+[ext_resource type="Texture2D" uid="uid://becijvdxnmhw" path="res://Assets/GUI/Healthbar.png" id="3_bjfho"]
+[ext_resource type="Texture2D" uid="uid://b11spxgy18t6h" path="res://Assets/Other/Energy.png" id="4_qtcwj"]
+[ext_resource type="Texture2D" uid="uid://dy6jyec2oqbfo" path="res://Assets/Enemies/Basic.png" id="5_bgrxv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fbih"]
+atlas = ExtResource("3_bjfho")
+region = Rect2(64, 22, 32, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1xeu"]
+atlas = ExtResource("3_bjfho")
+region = Rect2(32, 22, 32, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36asn"]
+atlas = ExtResource("3_bjfho")
+region = Rect2(0, 22, 32, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jye8"]
+atlas = ExtResource("3_bjfho")
+region = Rect2(64, 11, 32, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43w4t"]
+atlas = ExtResource("3_bjfho")
+region = Rect2(32, 11, 32, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gr8i"]
+atlas = ExtResource("3_bjfho")
+region = Rect2(0, 11, 32, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ep0j"]
+atlas = ExtResource("3_bjfho")
+region = Rect2(64, 0, 32, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4f5kr"]
+atlas = ExtResource("3_bjfho")
+region = Rect2(32, 0, 32, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_piegi"]
+atlas = ExtResource("3_bjfho")
+region = Rect2(0, 0, 32, 11)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i2avg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fbih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1xeu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36asn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jye8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43w4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gr8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ep0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4f5kr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_piegi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="HUD" type="Control" unique_id=1087313395]
+process_mode = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_fccik")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2115182615]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_e0onf")
+
+[node name="Health Bar" type="AnimatedSprite2D" parent="." unique_id=1989063682]
+position = Vector2(1280.0001, 1583)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_i2avg")
+
+[node name="Ammo" type="Label" parent="." unique_id=166411888]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 1574.0
+offset_right = 152.0
+offset_bottom = 1597.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+text = "Ammo: Null"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Coins" type="Label" parent="." unique_id=1329355091]
+layout_mode = 0
+offset_left = 2396.0
+offset_top = 70.0
+offset_right = 2489.0
+offset_bottom = 93.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+text = "Energy: Null"
+
+[node name="Wave" type="Label" parent="." unique_id=1437511696]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 67.0
+offset_right = 263.0
+offset_bottom = 90.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+text = "Wave = Null"
+
+[node name="Energy" type="Sprite2D" parent="." unique_id=1809905083]
+position = Vector2(2314, 80)
+texture = ExtResource("4_qtcwj")
+
+[node name="Bullet" type="ColorRect" parent="." unique_id=1692750713]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 1562.0
+offset_right = 51.0
+offset_bottom = 1611.5991
+rotation = 1.5707964
+scale = Vector2(2, 1)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(0, 1, 0, 1)
+
+[node name="Basic" type="Sprite2D" parent="." unique_id=1004266707]
+position = Vector2(78, 85)
+scale = Vector2(4, 4)
+texture = ExtResource("5_bgrxv")
