@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnr53wwx6b1x1"
-path="res://.godot/imported/shooterdying.png-233f1180df390fbc02732a3ca23252c6.ctex"
+uid="uid://bi4c202rklfli"
+path="res://.godot/imported/Shotgun_Death.png-6f55d1b388de92c1f7d3271ca3ad7c10.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Death/shooterdying.png"
-dest_files=["res://.godot/imported/shooterdying.png-233f1180df390fbc02732a3ca23252c6.ctex"]
+source_file="res://Assets/Particles/Death/Ships/Shotgun_Death.png"
+dest_files=["res://.godot/imported/Shotgun_Death.png-6f55d1b388de92c1f7d3271ca3ad7c10.ctex"]
 
 [params]
 

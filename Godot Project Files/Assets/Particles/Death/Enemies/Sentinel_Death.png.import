@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baqilccvmk77q"
-path="res://.godot/imported/Shooter_Death.png-e9490f639744ddb8f74e5a6522fa1222.ctex"
+uid="uid://d2ykc38tm71tf"
+path="res://.godot/imported/Sentinel_Death.png-965c1c1b0defc419f1e1769c8882b98e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Death/Shooter_Death.png"
-dest_files=["res://.godot/imported/Shooter_Death.png-e9490f639744ddb8f74e5a6522fa1222.ctex"]
+source_file="res://Assets/Particles/Death/Enemies/Sentinel_Death.png"
+dest_files=["res://.godot/imported/Sentinel_Death.png-965c1c1b0defc419f1e1769c8882b98e.ctex"]
 
 [params]
 

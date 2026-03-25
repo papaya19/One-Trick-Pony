@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgmxt4qokeuyx"
-path="res://.godot/imported/Basic_Death.png-1814462483be753bead3a0f5397c4aa6.ctex"
+uid="uid://2bd5vlstuifq"
+path="res://.godot/imported/Exploder_Death.png-d16949a543e9d443aa4c849d15cb4fbc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Death/Basic_Death.png"
-dest_files=["res://.godot/imported/Basic_Death.png-1814462483be753bead3a0f5397c4aa6.ctex"]
+source_file="res://Assets/Particles/Death/Enemies/Exploder_Death.png"
+dest_files=["res://.godot/imported/Exploder_Death.png-d16949a543e9d443aa4c849d15cb4fbc.ctex"]
 
 [params]
 

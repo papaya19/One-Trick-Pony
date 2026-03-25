@@ -6,11 +6,11 @@ extends Control
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("GOD"):
-		Global.selected_weapon = "GOD"
+		Global.selected_ship = "GOD"
 		start_game()
 
 func _on_shotgun_pressed() -> void:
-	Global.selected_weapon = "Shotgun"
+	Global.selected_ship = "Shotgun"
 	var tween = create_tween().set_trans(Tween.TRANS_SPRING)
 	tween.tween_property(shotgun, "scale", Vector2(0,0), 0.1).from_current()
 	await tween.finished
@@ -25,7 +25,7 @@ func _on_shotgun_mouse_exited() -> void:
 	tween.tween_property(shotgun, "scale", Vector2(1,1), 0.1).from_current()
 
 func _on_assault_rifle_pressed() -> void:
-	Global.selected_weapon = "Assault Rifle"
+	Global.selected_ship = "Assault Rifle"
 	var tween = create_tween().set_trans(Tween.TRANS_SPRING)
 	tween.tween_property(assault_rifle, "scale", Vector2(0,0), 0.1).from_current()
 	await tween.finished
@@ -40,7 +40,7 @@ func _on_assault_rifle_mouse_exited() -> void:
 	tween.tween_property(assault_rifle, "scale", Vector2(1,1), 0.1).from_current()
 
 func _on_sniper_pressed() -> void:
-	Global.selected_weapon = "Sniper"
+	Global.selected_ship = "Sniper"
 	var tween = create_tween().set_trans(Tween.TRANS_SPRING)
 	tween.tween_property(sniper, "scale", Vector2(0,0), 0.1).from_current()
 	await tween.finished

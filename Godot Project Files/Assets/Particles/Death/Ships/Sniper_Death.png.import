@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwwij4b4c3nmd"
-path="res://.godot/imported/basicdying.png-9dbea7e2dc21543f6e1e2d4013bf80c2.ctex"
+uid="uid://dmiory8xb5eic"
+path="res://.godot/imported/Sniper_Death.png-f88634622550ab80dcfdf29468720e9c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Death/basicdying.png"
-dest_files=["res://.godot/imported/basicdying.png-9dbea7e2dc21543f6e1e2d4013bf80c2.ctex"]
+source_file="res://Assets/Particles/Death/Ships/Sniper_Death.png"
+dest_files=["res://.godot/imported/Sniper_Death.png-f88634622550ab80dcfdf29468720e9c.ctex"]
 
 [params]
 

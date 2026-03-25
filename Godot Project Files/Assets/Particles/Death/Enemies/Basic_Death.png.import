@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi4c202rklfli"
-path="res://.godot/imported/shotgun-dead.png-1ff35d5bbc2c70070a848b7e004bad97.ctex"
+uid="uid://bgmxt4qokeuyx"
+path="res://.godot/imported/Basic_Death.png-c2fe389771de8d87d0b8efae05e9e910.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Death/shotgun-dead.png"
-dest_files=["res://.godot/imported/shotgun-dead.png-1ff35d5bbc2c70070a848b7e004bad97.ctex"]
+source_file="res://Assets/Particles/Death/Enemies/Basic_Death.png"
+dest_files=["res://.godot/imported/Basic_Death.png-c2fe389771de8d87d0b8efae05e9e910.ctex"]
 
 [params]
 

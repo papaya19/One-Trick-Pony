@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3iymdgtuvkrp"
-path="res://.godot/imported/sprinterdead.png-41645adeb924e6230fa46af679dab80d.ctex"
+uid="uid://baqilccvmk77q"
+path="res://.godot/imported/Shooter_Death.png-f17856e36413f88b8819efd1125bb5b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Death/sprinterdead.png"
-dest_files=["res://.godot/imported/sprinterdead.png-41645adeb924e6230fa46af679dab80d.ctex"]
+source_file="res://Assets/Particles/Death/Enemies/Shooter_Death.png"
+dest_files=["res://.godot/imported/Shooter_Death.png-f17856e36413f88b8819efd1125bb5b6.ctex"]
 
 [params]
 

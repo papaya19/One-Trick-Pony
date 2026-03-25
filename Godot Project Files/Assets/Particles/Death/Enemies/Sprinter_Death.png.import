@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnf3g27q1js1c"
-path="res://.godot/imported/sentineldying.png-8cf40eab5b4f1be7b3a8c580696561f0.ctex"
+uid="uid://dd6xxjwt4a8qu"
+path="res://.godot/imported/Sprinter_Death.png-6c8d6ab995fe11a28f51c3ab37aa3ff3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Death/sentineldying.png"
-dest_files=["res://.godot/imported/sentineldying.png-8cf40eab5b4f1be7b3a8c580696561f0.ctex"]
+source_file="res://Assets/Particles/Death/Enemies/Sprinter_Death.png"
+dest_files=["res://.godot/imported/Sprinter_Death.png-6c8d6ab995fe11a28f51c3ab37aa3ff3.ctex"]
 
 [params]
 

@@ -3,6 +3,7 @@ extends Node2D
 const energy: PackedScene = preload("res://Scenes/Spawning/energy.tscn")
 const explosion: PackedScene  = preload("res://Scenes/Spawning/explosion.tscn")
 const bullet: PackedScene  = preload("res://Scenes/Spawning/bullet.tscn")
+
 var enemy_speed: int
 var enemy_damage: int 
 var enemy_health: int
@@ -10,6 +11,8 @@ var energy_dropped_value: int
 var can_shoot: bool
 var can_explode: bool
 var enemy_type: String
+
+var dead: bool = false
 
 func _ready() -> void:
 	look_at(get_node("/root/Level/Player").global_position)
@@ -27,7 +30,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var direction = global_position.direction_to(get_node("/root/Level/Player").global_position)
 	position += direction * enemy_speed * delta
-	if can_shoot and global_position.distance_to(get_node("/root/Level/Player").global_position) < 300:
+	if can_shoot and global_position.distance_to(get_node("/root/Level/Player").global_position) < 300 and not dead:
 		can_shoot = false
 		enemy_speed = 0
 		shoot()
@@ -50,7 +53,7 @@ func enemy_take_damage(damage_amount):
 			explode()
 		$CPUParticles2D.emitting = true
 		set_physics_process(false)
-		can_shoot = false
+		dead = true
 		$Sprite2D.hide()
 		$Area2D/CollisionShape2D.set_deferred("disabled", true)
 		spawn_energy()
