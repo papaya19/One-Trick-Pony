@@ -41,7 +41,7 @@ func _on_area_2d_area_entered(body) -> void:
 	if body.is_in_group("player_bullet"):
 		enemy_take_damage(Global.bullet_damage)
 	if body.is_in_group("player"):
-		Global.player_take_damage.emit(round(lerp(1, 2, (float(enemy_health) /  Global.enemy_stats[enemy_type]["health"]))))
+		Global.player_take_damage.emit(ceil(enemy_damage * (enemy_health / Global.enemy_stats[enemy_type]["health"])))
 		queue_free()
 	if body.is_in_group("explosion"):
 		enemy_take_damage(100)
