@@ -22,7 +22,7 @@ func _process(_delta: float) -> void:
 	if enemies_spawned >= enemies_to_spawn:
 		enemy_can_spawn = false
 
-	if get_node("/root/Level/Enemy Spawner").get_child_count() == 0 and wave_active:
+	if get_node("/root/Level/Enemy Spawner").get_child_count() == 0 and wave_active and not enemy_can_spawn:
 		wave_finished()
 
 
@@ -31,9 +31,7 @@ func wave_finished():
 	Global.current_wave += 1
 	if Global.current_wave == 10:
 		print("You win")
-	#do something with upgrades
-	Global.bullet_count = Global.magazine_size
-	await get_tree().create_timer(3).timeout
+	Global.queue_upgrade.emit()
 	enemies_to_spawn += Global.current_wave * wave_multiplier
 	Global.enemy_spawn_time -= Global.current_wave * pow(wave_multiplier, 4)
 	enemies_spawned = 0

@@ -1,6 +1,6 @@
 extends Area2D
 
-var speed: int = 2.5
+var speed: float = 2.5
 var energy_value: int
 
 func _ready() -> void:

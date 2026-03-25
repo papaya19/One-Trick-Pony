@@ -31,7 +31,10 @@ var enemy_stats: Dictionary = {
 	"Sentinel": {"texture_file_path": "res://Assets/Enemies/Sentinel.png", "death_particles_file_path": "res://Assets/Death/Sentinel_Death.png","spawn_chance": 4,
 	"speed": 50, "damage": 2, "energy_dropped_value": 3, "health": 500, "scale": Vector2(2,2), "can_shoot": false, "can_explode": false},
 }
-
+var upgrade_stats: Dictionary = {
+	"bullet_damage": {"title": "Damage", "description": "increases damage by ", "values": {10: 60, 20: 30, 30: 10}, "chance": 80, "cost": 5}, 
+	"test": {"title": "test", "description": "test ", "values": {10: 60, 20: 30, 30: 10}, "chance": 20, "cost": 5},
+}
 
 signal player_take_damage(damage_amount: int)
 signal player_gain_energy(energy_value: int)

@@ -1,7 +1,7 @@
 extends TileMapLayer
 
-var tilemap_width: int = Global.screen_size.x / 3
-var tilemap_height: int = Global.screen_size.y / 3
+var tilemap_width: float = Global.screen_size.x / 3
+var tilemap_height: float = Global.screen_size.y / 3
 
 var noise = FastNoiseLite.new()
 

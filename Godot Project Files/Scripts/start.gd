@@ -1,7 +1,7 @@
 extends Control
 
-@onready var shotgun: TextureButton = $"HBoxContainer/Control/Shotgun"
-@onready var assault_rifle: TextureButton = $"HBoxContainer/Control2/Assault Rifle"
+@onready var shotgun: TextureButton = $"HBoxContainer/Control1/Shotgun"
+@onready var assault_rifle: TextureButton = $"HBoxContainer/Control2/Assault_Rifle"
 @onready var sniper: TextureButton = $"HBoxContainer/Control3/Sniper"
 
 func _process(_delta: float) -> void:
@@ -57,4 +57,4 @@ func _on_sniper_mouse_exited() -> void:
 
 func start_game():
 	get_node("/root/Global/GUI/HUD").process_mode = Node.PROCESS_MODE_ALWAYS
-	get_tree().change_scene_to_file("res://Scenes/Technical/level.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Player/level.tscn")

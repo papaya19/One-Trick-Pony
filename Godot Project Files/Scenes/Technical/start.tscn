@@ -11,13 +11,9 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 100.0
-offset_top = 100.0
-offset_right = -100.0
-offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.95, 0.95)
+scale = Vector2(0.85, 0.85)
 pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("1_3bxa3")
 
@@ -31,11 +27,11 @@ grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 alignment = 1
 
-[node name="Control" type="Control" parent="HBoxContainer" unique_id=343131248]
+[node name="Control1" type="Control" parent="HBoxContainer" unique_id=343131248]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Shotgun" type="TextureButton" parent="HBoxContainer/Control" unique_id=1788752669]
+[node name="Shotgun" type="TextureButton" parent="HBoxContainer/Control1" unique_id=1788752669]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -47,7 +43,7 @@ texture_normal = ExtResource("2_anqol")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="HBoxContainer/Control/Shotgun" unique_id=887710807]
+[node name="Label" type="Label" parent="HBoxContainer/Control1/Shotgun" unique_id=887710807]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -66,7 +62,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Assault Rifle" type="TextureButton" parent="HBoxContainer/Control2" unique_id=1865461140]
+[node name="Assault_Rifle" type="TextureButton" parent="HBoxContainer/Control2" unique_id=1865461140]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -78,7 +74,7 @@ texture_normal = ExtResource("3_cto3u")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="HBoxContainer/Control2/Assault Rifle" unique_id=2029150895]
+[node name="Label" type="Label" parent="HBoxContainer/Control2/Assault_Rifle" unique_id=2029150895]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -126,12 +122,12 @@ text = "Sniper"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="mouse_entered" from="HBoxContainer/Control/Shotgun" to="." method="_on_shotgun_mouse_entered"]
-[connection signal="mouse_exited" from="HBoxContainer/Control/Shotgun" to="." method="_on_shotgun_mouse_exited"]
-[connection signal="pressed" from="HBoxContainer/Control/Shotgun" to="." method="_on_shotgun_pressed"]
-[connection signal="mouse_entered" from="HBoxContainer/Control2/Assault Rifle" to="." method="_on_assault_rifle_mouse_entered"]
-[connection signal="mouse_exited" from="HBoxContainer/Control2/Assault Rifle" to="." method="_on_assault_rifle_mouse_exited"]
-[connection signal="pressed" from="HBoxContainer/Control2/Assault Rifle" to="." method="_on_assault_rifle_pressed"]
+[connection signal="mouse_entered" from="HBoxContainer/Control1/Shotgun" to="." method="_on_shotgun_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/Control1/Shotgun" to="." method="_on_shotgun_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/Control1/Shotgun" to="." method="_on_shotgun_pressed"]
+[connection signal="mouse_entered" from="HBoxContainer/Control2/Assault_Rifle" to="." method="_on_assault_rifle_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/Control2/Assault_Rifle" to="." method="_on_assault_rifle_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/Control2/Assault_Rifle" to="." method="_on_assault_rifle_pressed"]
 [connection signal="mouse_entered" from="HBoxContainer/Control3/Sniper" to="." method="_on_sniper_mouse_entered"]
 [connection signal="mouse_exited" from="HBoxContainer/Control3/Sniper" to="." method="_on_sniper_mouse_exited"]
 [connection signal="pressed" from="HBoxContainer/Control3/Sniper" to="." method="_on_sniper_pressed"]
