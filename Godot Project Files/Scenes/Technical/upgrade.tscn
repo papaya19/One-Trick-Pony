@@ -55,8 +55,8 @@ stretch_mode = 5
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = 350.0
-offset_bottom = 419.0
+offset_top = 325.0
+offset_bottom = 394.0
 grow_horizontal = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_font_sizes/font_size = 50
@@ -93,9 +93,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -170.0
-offset_top = -426.0
+offset_top = -401.0
 offset_right = 170.0
-offset_bottom = -285.0
+offset_bottom = -260.0
 grow_horizontal = 2
 grow_vertical = 0
 pivot_offset_ratio = Vector2(0.5, 0.5)
@@ -120,12 +120,12 @@ texture_normal = ExtResource("2_ckf2p")
 texture_disabled = ExtResource("3_d8j4a")
 stretch_mode = 5
 
-[node name="Tittle" type="Label" parent="VBoxContainer/Upgrades/Control2/Option_2" unique_id=473005433]
+[node name="Tittle" type="Label" parent="VBoxContainer/Upgrades/Control2/Option_2" unique_id=337625323]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = 350.0
-offset_bottom = 419.0
+offset_top = 325.0
+offset_bottom = 394.0
 grow_horizontal = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_font_sizes/font_size = 50
@@ -134,7 +134,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Description" type="Label" parent="VBoxContainer/Upgrades/Control2/Option_2" unique_id=520818201]
+[node name="Description" type="Label" parent="VBoxContainer/Upgrades/Control2/Option_2" unique_id=1215770034]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -154,7 +154,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Cost" type="Label" parent="VBoxContainer/Upgrades/Control2/Option_2" unique_id=652417958]
+[node name="Cost" type="Label" parent="VBoxContainer/Upgrades/Control2/Option_2" unique_id=165912496]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -162,9 +162,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -170.0
-offset_top = -426.0
+offset_top = -401.0
 offset_right = 170.0
-offset_bottom = -285.0
+offset_bottom = -260.0
 grow_horizontal = 2
 grow_vertical = 0
 pivot_offset_ratio = Vector2(0.5, 0.5)
@@ -189,12 +189,12 @@ texture_normal = ExtResource("2_ckf2p")
 texture_disabled = ExtResource("3_d8j4a")
 stretch_mode = 5
 
-[node name="Tittle" type="Label" parent="VBoxContainer/Upgrades/Control3/Option_3" unique_id=1716876086]
+[node name="Tittle" type="Label" parent="VBoxContainer/Upgrades/Control3/Option_3" unique_id=1991341741]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = 350.0
-offset_bottom = 419.0
+offset_top = 325.0
+offset_bottom = 394.0
 grow_horizontal = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_font_sizes/font_size = 50
@@ -203,7 +203,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Description" type="Label" parent="VBoxContainer/Upgrades/Control3/Option_3" unique_id=1120717301]
+[node name="Description" type="Label" parent="VBoxContainer/Upgrades/Control3/Option_3" unique_id=831482008]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -223,7 +223,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Cost" type="Label" parent="VBoxContainer/Upgrades/Control3/Option_3" unique_id=1820194246]
+[node name="Cost" type="Label" parent="VBoxContainer/Upgrades/Control3/Option_3" unique_id=308643291]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -231,9 +231,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -170.0
-offset_top = -426.0
+offset_top = -401.0
 offset_right = 170.0
-offset_bottom = -285.0
+offset_bottom = -260.0
 grow_horizontal = 2
 grow_vertical = 0
 pivot_offset_ratio = Vector2(0.5, 0.5)
