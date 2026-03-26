@@ -24,6 +24,7 @@ Global="*uid://ppsdqblm062y"
 
 window/size/viewport_width=2560
 window/size/viewport_height=1664
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 mouse_cursor/custom_image="uid://b68gtr4mjv2om"
