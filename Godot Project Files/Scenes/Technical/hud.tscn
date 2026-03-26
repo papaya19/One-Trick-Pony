@@ -5,6 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://b11spxgy18t6h" path="res://Assets/Other/Energy.png" id="4_qtcwj"]
 [ext_resource type="Texture2D" uid="uid://dy6jyec2oqbfo" path="res://Assets/Enemies/Basic.png" id="5_bgrxv"]
 [ext_resource type="Texture2D" uid="uid://dmsgrfquv2v34" path="res://Assets/References/hollow Knight Reference.png" id="5_qtcwj"]
+[ext_resource type="Texture2D" uid="uid://dfrmlhby1psuo" path="res://Assets/References/onoff.png" id="6_rti8a"]
+[ext_resource type="Texture2D" uid="uid://c5jqypf68y1nr" path="res://Assets/References/tetrys.png" id="7_8gxc2"]
+[ext_resource type="Texture2D" uid="uid://cv1vyjixp8ntw" path="res://Assets/References/humanirememberyouregenocides.png" id="8_so7ii"]
+[ext_resource type="Texture2D" uid="uid://d0ppyewfomncs" path="res://Assets/References/atrueskonger.png" id="9_dydp4"]
+[ext_resource type="Texture2D" uid="uid://cgdvvqctiw657" path="res://Assets/References/Pokeball.png" id="10_5bqfw"]
+[ext_resource type="Texture2D" uid="uid://ckg2y8rtnetd6" path="res://Assets/References/gojo.png" id="11_dydp4"]
+[ext_resource type="Texture2D" uid="uid://cwa0jx2rlfe7s" path="res://Assets/References/Loki Helmet.png" id="12_5bqfw"]
+[ext_resource type="Texture2D" uid="uid://dwsiir4v0wc60" path="res://Assets/References/Rivals logo.png" id="13_a2p7w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6fbih"]
 atlas = ExtResource("3_bjfho")
@@ -259,4 +267,137 @@ scale = Vector2(2, 2)
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 2
 texture = ExtResource("5_qtcwj")
+stretch_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="References" unique_id=1815513604]
+layout_mode = 1
+offset_left = 300.0
+offset_top = 25.0
+offset_right = 364.0
+offset_bottom = 89.0
+scale = Vector2(2, 2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = ExtResource("6_rti8a")
+stretch_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="References" unique_id=1372339869]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -264.0
+offset_right = 114.0
+offset_bottom = -200.0
+grow_vertical = 0
+scale = Vector2(2, 2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = ExtResource("7_8gxc2")
+stretch_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="References" unique_id=1897613158]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 568.0
+offset_top = -114.0
+offset_right = 632.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2, 2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = ExtResource("8_so7ii")
+stretch_mode = 2
+
+[node name="TextureRect5" type="TextureRect" parent="References" unique_id=1206605225]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 268.0
+offset_top = 50.0
+offset_right = 332.0
+offset_bottom = 114.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = ExtResource("9_dydp4")
+stretch_mode = 2
+
+[node name="TextureRect6" type="TextureRect" parent="References" unique_id=1458622757]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -232.0
+offset_right = -32.0
+offset_bottom = -200.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(2, 2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = ExtResource("10_5bqfw")
+stretch_mode = 2
+
+[node name="TextureRect7" type="TextureRect" parent="References" unique_id=1863739388]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 25.0
+offset_top = -432.0
+offset_right = 57.0
+offset_bottom = -400.0
+grow_vertical = 2
+scale = Vector2(2, 2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = ExtResource("11_dydp4")
+stretch_mode = 2
+
+[node name="TextureRect8" type="TextureRect" parent="References" unique_id=74175814]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -680.0
+offset_top = 25.0
+offset_right = -663.0
+offset_bottom = 50.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = ExtResource("12_5bqfw")
+stretch_mode = 2
+
+[node name="TextureRect9" type="TextureRect" parent="References" unique_id=583116981]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -89.0
+offset_top = -89.0
+offset_right = -57.0
+offset_bottom = -57.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(2, 2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = ExtResource("13_a2p7w")
 stretch_mode = 2
