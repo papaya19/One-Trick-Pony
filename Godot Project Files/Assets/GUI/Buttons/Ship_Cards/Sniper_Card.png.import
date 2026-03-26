@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjxl20jlh8070"
-path="res://.godot/imported/refresh-button.png-49f7a4d28602fb859fc0475a6326547e.ctex"
+uid="uid://bajy8y1x8wxj3"
+path="res://.godot/imported/Sniper_Card.png-2ce370b67bff765304aa087064045730.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GUI/refresh-button.png"
-dest_files=["res://.godot/imported/refresh-button.png-49f7a4d28602fb859fc0475a6326547e.ctex"]
+source_file="res://Assets/GUI/Buttons/Ship_Cards/Sniper_Card.png"
+dest_files=["res://.godot/imported/Sniper_Card.png-2ce370b67bff765304aa087064045730.ctex"]
 
 [params]
 

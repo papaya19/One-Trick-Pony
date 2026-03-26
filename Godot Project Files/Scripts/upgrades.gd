@@ -64,9 +64,9 @@ func refresh_shop():
 	option_1_value = get_random_value(option_1_upgrade)
 	option_2_value = get_random_value(option_2_upgrade)
 	option_3_value = get_random_value(option_3_upgrade)
-	$VBoxContainer/Upgrades/Control1/Option_1.text = Global.upgrade_stats[option_1_upgrade]["description"] + str(option_1_value) + "%"
-	$"VBoxContainer/Upgrades/Control2/Option_2".text = Global.upgrade_stats[option_2_upgrade]["description"] + str(option_2_value) + "%"
-	$"VBoxContainer/Upgrades/Control3/Option_3".text = Global.upgrade_stats[option_3_upgrade]["description"] + str(option_3_value) + "%"
+	#$VBoxContainer/Upgrades/Control1/Option_1.text = Global.upgrade_stats[option_1_upgrade]["description"] + str(option_1_value) + "%"
+	#$"VBoxContainer/Upgrades/Control2/Option_2".text = Global.upgrade_stats[option_2_upgrade]["description"] + str(option_2_value) + "%"
+	#$"VBoxContainer/Upgrades/Control3/Option_3".text = Global.upgrade_stats[option_3_upgrade]["description"] + str(option_3_value) + "%"
 	option_1.visible = true
 	option_2.visible = true
 	option_3.visible = true

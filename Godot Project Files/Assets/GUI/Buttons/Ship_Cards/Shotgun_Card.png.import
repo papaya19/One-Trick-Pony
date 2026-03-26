@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pjgs8aav3m56"
-path="res://.godot/imported/Bullet.png-8ae52ae122a1b5764c1c117ad9755dae.ctex"
+uid="uid://dntjrgtpd8xa0"
+path="res://.godot/imported/Shotgun_Card.png-086748d0f398badb05355b85cc6dbecb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Other/Bullet.png"
-dest_files=["res://.godot/imported/Bullet.png-8ae52ae122a1b5764c1c117ad9755dae.ctex"]
+source_file="res://Assets/GUI/Buttons/Ship_Cards/Shotgun_Card.png"
+dest_files=["res://.godot/imported/Shotgun_Card.png-086748d0f398badb05355b85cc6dbecb.ctex"]
 
 [params]
 

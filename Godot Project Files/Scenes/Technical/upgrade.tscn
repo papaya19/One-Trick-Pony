@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://86ityaijhlub"]
 
 [ext_resource type="Script" uid="uid://ka01a6dsd18g" path="res://Scripts/upgrades.gd" id="1_wqk08"]
+[ext_resource type="Texture2D" uid="uid://brlhoda4wus0r" path="res://Assets/GUI/Buttons/Upgrades/Upgrade_Card.png" id="2_ckf2p"]
+[ext_resource type="Texture2D" uid="uid://g2pjat76csdp" path="res://Assets/GUI/Buttons/Upgrades/Heal_Button.png" id="3_5hanb"]
+[ext_resource type="Texture2D" uid="uid://b8r315wnpmdgy" path="res://Assets/GUI/Buttons/Upgrades/Refresh_Button.png" id="3_6vvpt"]
 
 [node name="Upgrade" type="Control" unique_id=706410703]
 layout_mode = 3
@@ -9,7 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.9, 0.9)
+scale = Vector2(0.8, 0.8)
 pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("1_wqk08")
 
@@ -31,7 +34,7 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Option_1" type="Button" parent="VBoxContainer/Upgrades/Control1" unique_id=1326912736]
+[node name="Option_1" type="TextureButton" parent="VBoxContainer/Upgrades/Control1" unique_id=1655116090]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -39,15 +42,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 100
-text = "Option 1"
-autowrap_mode = 3
+texture_normal = ExtResource("2_ckf2p")
+stretch_mode = 5
 
 [node name="Control2" type="Control" parent="VBoxContainer/Upgrades" unique_id=1208723989]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Option_2" type="Button" parent="VBoxContainer/Upgrades/Control2" unique_id=1744828140]
+[node name="Option_2" type="TextureButton" parent="VBoxContainer/Upgrades/Control2" unique_id=1907859253]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -55,15 +57,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 100
-text = "Option 2"
-autowrap_mode = 3
+texture_normal = ExtResource("2_ckf2p")
+stretch_mode = 5
 
 [node name="Control3" type="Control" parent="VBoxContainer/Upgrades" unique_id=679500348]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Option_3" type="Button" parent="VBoxContainer/Upgrades/Control3" unique_id=1577561456]
+[node name="Option_3" type="TextureButton" parent="VBoxContainer/Upgrades/Control3" unique_id=1570165349]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -71,9 +72,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 100
-text = "Option 3"
-autowrap_mode = 3
+texture_normal = ExtResource("2_ckf2p")
+stretch_mode = 5
 
 [node name="Refresh" type="HBoxContainer" parent="VBoxContainer" unique_id=1824092372]
 layout_mode = 2
@@ -84,7 +84,7 @@ size_flags_stretch_ratio = 0.25
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Refresh" type="Button" parent="VBoxContainer/Refresh/Control1" unique_id=441685243]
+[node name="Refresh" type="TextureButton" parent="VBoxContainer/Refresh/Control1" unique_id=1031620311]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -92,14 +92,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 100
-text = "Refresh Shop"
+texture_normal = ExtResource("3_6vvpt")
+stretch_mode = 5
 
 [node name="Control2" type="Control" parent="VBoxContainer/Refresh" unique_id=844447468]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Heal" type="Button" parent="VBoxContainer/Refresh/Control2" unique_id=489771383]
+[node name="Heal" type="TextureButton" parent="VBoxContainer/Refresh/Control2" unique_id=1741996951]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -107,14 +107,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 100
-text = "Heal 1 HP"
+texture_normal = ExtResource("3_5hanb")
+stretch_mode = 5
 
 [node name="Control3" type="Control" parent="VBoxContainer/Refresh" unique_id=759664090]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Exit" type="Button" parent="VBoxContainer/Refresh/Control3" unique_id=660664945]
+[node name="Exit" type="TextureButton" parent="VBoxContainer/Refresh/Control3" unique_id=421002529]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -122,8 +122,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 100
-text = "Exit"
+stretch_mode = 5
 
 [connection signal="mouse_entered" from="VBoxContainer/Upgrades/Control1/Option_1" to="." method="_on_option_1_mouse_entered"]
 [connection signal="mouse_exited" from="VBoxContainer/Upgrades/Control1/Option_1" to="." method="_on_option_1_mouse_exited"]

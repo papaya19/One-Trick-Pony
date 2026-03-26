@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brlhoda4wus0r"
-path="res://.godot/imported/upgrade-card.png-08d3de6c721f837fab7ee51c605ef80f.ctex"
+uid="uid://cm6ecsn1crfws"
+path="res://.godot/imported/Assault_Rifle_Card.png-5041fc564598bb11d7e2e509cad86bd3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GUI/upgrade-card.png"
-dest_files=["res://.godot/imported/upgrade-card.png-08d3de6c721f837fab7ee51c605ef80f.ctex"]
+source_file="res://Assets/GUI/Buttons/Ship_Cards/Assault_Rifle_Card.png"
+dest_files=["res://.godot/imported/Assault_Rifle_Card.png-5041fc564598bb11d7e2e509cad86bd3.ctex"]
 
 [params]
 
