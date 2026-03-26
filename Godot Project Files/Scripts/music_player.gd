@@ -8,7 +8,7 @@ var playlist: Array = [
 ]
 func _ready():
 	pass
-	#play_random_song()
+	play_random_song()
 
 func play_random_song():
 	stream = playlist.pick_random()
