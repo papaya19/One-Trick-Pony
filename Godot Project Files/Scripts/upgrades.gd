@@ -98,8 +98,6 @@ func get_random_value(option):
 	for value_amount in Global.upgrade_stats[option]["values"]:
 		current_sum += Global.upgrade_stats[option]["values"][value_amount]["chance"]
 		if random <= current_sum:
-			print(option)
-			print(value_amount)
 			return value_amount
 
 func _on_option_1_pressed() -> void:
@@ -194,6 +192,7 @@ func _on_exit_pressed() -> void:
 	get_tree().paused = false
 	Global.bullet_count = Global.magazine_size
 	exit.visible = true
+	Global.wave_start.emit()
 func _on_exit_mouse_entered() -> void:
 	if exit.disabled == false:
 		var tween = create_tween().set_trans(Tween.TRANS_SPRING)

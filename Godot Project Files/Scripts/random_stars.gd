@@ -17,11 +17,6 @@ func _ready():
 	noise.seed = randi() # Randomize the seed
 	noise.frequency = 0.01
 	generate_galaxy()
-	var noise_tex = NoiseTexture2D.new()
-	noise_tex.width = 2560
-	noise_tex.height = 1664
-	noise_tex.noise = noise
-	Global.test = true
 
 func generate_galaxy():
 	for x in range(tilemap_width):

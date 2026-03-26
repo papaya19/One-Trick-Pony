@@ -9,6 +9,12 @@ var enemies_to_spawn: int = 10
 var wave_multiplier = 0.5
 var wave_active: bool
 
+func _ready() -> void:
+	Global.wave_start.connect(wave_start)
+
+func wave_start():
+	enemy_can_spawn = true
+	Global.can_shoot = false
 
 func _process(_delta: float) -> void:
 	if enemy_can_spawn:
@@ -18,6 +24,7 @@ func _process(_delta: float) -> void:
 		enemy_can_spawn = true
 		enemies_spawned += 1
 		wave_active = true
+		
 
 	if enemies_spawned >= enemies_to_spawn:
 		enemy_can_spawn = false
@@ -28,14 +35,14 @@ func _process(_delta: float) -> void:
 
 func wave_finished():
 	wave_active = false
+	Global.can_shoot = false
 	Global.current_wave += 1
 	if Global.current_wave == 10:
-		print("You win")
+		Global.queue_win.emit()
 	Global.queue_upgrade.emit()
 	enemies_to_spawn += Global.current_wave * wave_multiplier
 	Global.enemy_spawn_time -= Global.current_wave * pow(wave_multiplier, 4)
 	enemies_spawned = 0
-	enemy_can_spawn = true
 
 func summon_enemy():
 	get_random_coordinates()

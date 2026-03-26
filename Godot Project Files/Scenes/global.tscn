@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://1a46fps04g5s" path="res://Scripts/global.gd" id="1_uoijj"]
 [ext_resource type="PackedScene" uid="uid://xemiier5q1s5" path="res://Scenes/Technical/hud.tscn" id="1_yl8w0"]
 [ext_resource type="PackedScene" uid="uid://86ityaijhlub" path="res://Scenes/Technical/upgrade.tscn" id="3_yl8w0"]
+[ext_resource type="PackedScene" uid="uid://cioi4cthvbtqk" path="res://Scenes/Technical/win.tscn" id="4_pklo1"]
 
 [node name="Global" type="Node" unique_id=1886466201]
 process_mode = 3
@@ -13,3 +14,5 @@ script = ExtResource("1_uoijj")
 [node name="HUD" parent="GUI" unique_id=1087313395 instance=ExtResource("1_yl8w0")]
 
 [node name="Upgrade" parent="GUI" unique_id=706410703 instance=ExtResource("3_yl8w0")]
+
+[node name="Win" parent="GUI" unique_id=1500484943 instance=ExtResource("4_pklo1")]

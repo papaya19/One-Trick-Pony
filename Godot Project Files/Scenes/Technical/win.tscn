@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cioi4cthvbtqk"]
+
+[ext_resource type="Script" uid="uid://oc33pmpiegnw" path="res://Scripts/win.gd" id="1_cevt8"]
+[ext_resource type="Texture2D" uid="uid://dpt6vregpvdtr" path="res://Assets/Background/Basic_Background.png" id="2_77amj"]
+
+[node name="Win" type="Control" unique_id=1500484943]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cevt8")
+
+[node name="ColorRect" type="TextureRect" parent="." unique_id=926267809]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = ExtResource("2_77amj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=181446201]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1310793381]
+layout_mode = 2
+theme_override_font_sizes/font_size = 200
+text = "You reached wave 10
+YOU WIN!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=464448978]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 200
+text = "Continue in infinite mode"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

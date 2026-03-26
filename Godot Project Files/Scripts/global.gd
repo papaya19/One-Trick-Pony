@@ -172,6 +172,8 @@ var upgrade_stats: Dictionary = {
 signal player_take_damage(damage_amount: int)
 signal player_gain_energy(energy_value: int)
 signal queue_upgrade()
+signal queue_win()
+signal wave_start()
 @export var energy_count: int = 0
 @export var invincible: bool = false
 @export var selected_ship: String
@@ -189,9 +191,8 @@ var spread: float
 var bullets_per_shot: int
 var bullets_pierce: bool
 
-var test: bool = false
+var can_shoot: bool = true
 
 
 func _ready() -> void:
-	print(screen_size)
 	$"GUI/HUD".process_mode = Node.PROCESS_MODE_DISABLED
