@@ -32,17 +32,17 @@ func _process(_delta: float) -> void:
 		return
 
 
-	if Global.energy_count >= Global.upgrade_stats[option_1_upgrade]["cost"]:
+	if Global.energy_count >= Global.upgrade_stats[option_1_upgrade]["values"][option_1_value]["cost"]:
 		option_1.disabled = false
 	else:
 		option_1.disabled = true
 	
-	if Global.energy_count >= Global.upgrade_stats[option_2_upgrade]["cost"]:
+	if Global.energy_count >= Global.upgrade_stats[option_2_upgrade]["values"][option_2_value]["cost"]:
 		option_2.disabled = false
 	else:
 		option_2.disabled = true
 	
-	if Global.energy_count >= Global.upgrade_stats[option_1_upgrade]["cost"]:
+	if Global.energy_count >= Global.upgrade_stats[option_3_upgrade]["values"][option_3_value]["cost"]:
 		option_3.disabled = false
 	else:
 		option_3.disabled = true
@@ -58,9 +58,9 @@ func _process(_delta: float) -> void:
 		heal.disabled = true
 
 func refresh_shop():
-	option_1_upgrade = get_random_upgrade()
-	option_2_upgrade = get_random_upgrade()
-	option_3_upgrade = get_random_upgrade()
+	option_1_upgrade = Global.upgrade_stats.keys().pick_random()
+	option_2_upgrade = Global.upgrade_stats.keys().pick_random()
+	option_3_upgrade = Global.upgrade_stats.keys().pick_random()
 	option_1_value = get_random_value(option_1_upgrade)
 	option_2_value = get_random_value(option_2_upgrade)
 	option_3_value = get_random_value(option_3_upgrade)
@@ -79,22 +79,21 @@ func start():
 	get_tree().paused = true
 
 func upgrade(selected_upgrade, selected_upgrade_value):
-	Global.set(selected_upgrade, Global.get(selected_upgrade) + Global.get(selected_upgrade) * selected_upgrade_value * 0.01)
-	Global.energy_count -= Global.upgrade_stats[selected_upgrade]["cost"]
+	if Global.upgrade_stats[selected_upgrade]["decrease"]:
+		Global.set(selected_upgrade, Global.get(selected_upgrade) - Global.get(selected_upgrade) * selected_upgrade_value * 0.01)
+	else:
+		Global.set(selected_upgrade, Global.get(selected_upgrade) + Global.get(selected_upgrade) * selected_upgrade_value * 0.01)
+	
+	Global.energy_count -=  Global.upgrade_stats[selected_upgrade]["values"][selected_upgrade_value]["cost"]
 
-func get_random_upgrade():
-	var current_sum = 0
-	var random = randi_range(1,100)
-	for upgrade_name in Global.upgrade_stats:
-		current_sum += Global.upgrade_stats[upgrade_name]["chance"]
-		if random <= current_sum:
-			return upgrade_name
 func get_random_value(option):
 	var current_sum = 0
 	var random = randi_range(1,100)
 	for value_amount in Global.upgrade_stats[option]["values"]:
-		current_sum += Global.upgrade_stats[option]["values"][value_amount]
+		current_sum += Global.upgrade_stats[option]["values"][value_amount]["chance"]
 		if random <= current_sum:
+			print(option)
+			print(value_amount)
 			return value_amount
 
 func _on_option_1_pressed() -> void:

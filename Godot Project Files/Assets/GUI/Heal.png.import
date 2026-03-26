@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvj4apg1maeb1"
-path="res://.godot/imported/Sprinter_Death.png-6c8d6ab995fe11a28f51c3ab37aa3ff3.ctex"
+uid="uid://g2pjat76csdp"
+path="res://.godot/imported/Heal.png-9ac1c5b6309ea87480c7118d81f4b1e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Particles/Death/Enemies/Sprinter_Death.png"
-dest_files=["res://.godot/imported/Sprinter_Death.png-6c8d6ab995fe11a28f51c3ab37aa3ff3.ctex"]
+source_file="res://Assets/GUI/Heal.png"
+dest_files=["res://.godot/imported/Heal.png-9ac1c5b6309ea87480c7118d81f4b1e3.ctex"]
 
 [params]
 

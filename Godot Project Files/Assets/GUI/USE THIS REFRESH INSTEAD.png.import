@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvj4apg1maeb1"
-path="res://.godot/imported/Sprinter_Death.png-6c8d6ab995fe11a28f51c3ab37aa3ff3.ctex"
+uid="uid://b8r315wnpmdgy"
+path="res://.godot/imported/USE THIS REFRESH INSTEAD.png-6febf651cd8ee0724ee952c4b3b10828.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Particles/Death/Enemies/Sprinter_Death.png"
-dest_files=["res://.godot/imported/Sprinter_Death.png-6c8d6ab995fe11a28f51c3ab37aa3ff3.ctex"]
+source_file="res://Assets/GUI/USE THIS REFRESH INSTEAD.png"
+dest_files=["res://.godot/imported/USE THIS REFRESH INSTEAD.png-6febf651cd8ee0724ee952c4b3b10828.ctex"]
 
 [params]
 

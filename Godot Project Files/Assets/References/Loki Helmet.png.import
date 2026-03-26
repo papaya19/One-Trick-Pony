@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvj4apg1maeb1"
-path="res://.godot/imported/Sprinter_Death.png-6c8d6ab995fe11a28f51c3ab37aa3ff3.ctex"
+uid="uid://cwa0jx2rlfe7s"
+path="res://.godot/imported/Loki Helmet.png-10bacbf3765be6d51f69096b0defb3b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Particles/Death/Enemies/Sprinter_Death.png"
-dest_files=["res://.godot/imported/Sprinter_Death.png-6c8d6ab995fe11a28f51c3ab37aa3ff3.ctex"]
+source_file="res://Assets/References/Loki Helmet.png"
+dest_files=["res://.godot/imported/Loki Helmet.png-10bacbf3765be6d51f69096b0defb3b7.ctex"]
 
 [params]
 

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://xemiier5q1s5"]
 
-[ext_resource type="Texture2D" uid="uid://t6tei14qfrb3" path="res://Assets/GUI/Overlay_Placeholder.png" id="1_e0onf"]
 [ext_resource type="Script" uid="uid://hy7d77ks51tc" path="res://Scripts/hud.gd" id="1_fccik"]
 [ext_resource type="Texture2D" uid="uid://becijvdxnmhw" path="res://Assets/GUI/Healthbar.png" id="3_bjfho"]
 [ext_resource type="Texture2D" uid="uid://b11spxgy18t6h" path="res://Assets/Other/Energy.png" id="4_qtcwj"]
 [ext_resource type="Texture2D" uid="uid://dy6jyec2oqbfo" path="res://Assets/Enemies/Basic.png" id="5_bgrxv"]
+[ext_resource type="Texture2D" uid="uid://dmsgrfquv2v34" path="res://Assets/References/hollow Knight Reference.png" id="5_qtcwj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6fbih"]
 atlas = ExtResource("3_bjfho")
@@ -88,7 +88,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_fccik")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=2115182615]
+[node name="Outline" type="Control" parent="." unique_id=1970554649]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -96,58 +96,167 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("1_e0onf")
 
-[node name="Health Bar" type="AnimatedSprite2D" parent="." unique_id=1989063682]
-position = Vector2(1280.0001, 1583)
+[node name="ColorRect1" type="ColorRect" parent="Outline" unique_id=376559849]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 150.0
+grow_horizontal = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+color = Color(0.47397572, 0.47397572, 0.47397572, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Outline" unique_id=1977553232]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -150.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+color = Color(0.47397572, 0.47397572, 0.47397572, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Outline" unique_id=497954650]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 150.0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+color = Color(0.47397572, 0.47397572, 0.47397572, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Outline" unique_id=568001978]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+color = Color(0.47397572, 0.47397572, 0.47397572, 1)
+
+[node name="Indicators" type="Control" parent="." unique_id=942086160]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Health" type="Control" parent="Indicators" unique_id=737256744]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="Health Bar" type="AnimatedSprite2D" parent="Indicators/Health" unique_id=1989063682]
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_i2avg")
 
-[node name="Ammo" type="Label" parent="." unique_id=166411888]
+[node name="Orb" type="TextureRect" parent="Indicators" unique_id=1725131659]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -121.0
+offset_top = 25.0
+offset_right = -25.0
+offset_bottom = 121.0
+grow_horizontal = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = ExtResource("4_qtcwj")
+
+[node name="Energy" type="Label" parent="Indicators/Orb" unique_id=1329355091]
 layout_mode = 0
-offset_left = 60.0
-offset_top = 1574.0
-offset_right = 152.0
-offset_bottom = 1597.0
+offset_left = -100.0
+offset_right = -7.0
+offset_bottom = 23.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+text = "Energy: Null"
+
+[node name="Enemy" type="TextureRect" parent="Indicators" unique_id=253362751]
+layout_mode = 1
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 121.0
+offset_bottom = 121.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = ExtResource("5_bgrxv")
+
+[node name="Wave" type="Label" parent="Indicators/Enemy" unique_id=1437511696]
+layout_mode = 0
+offset_left = 100.0
+offset_right = 192.0
+offset_bottom = 23.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+text = "Wave = Null"
+
+[node name="Bullet" type="ColorRect" parent="Indicators" unique_id=1063170440]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -121.0
+offset_right = 89.0
+offset_bottom = -25.0
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+color = Color(0, 1, 0, 1)
+
+[node name="Ammo" type="Label" parent="Indicators/Bullet" unique_id=166411888]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 64.0
+offset_right = 192.0
+offset_bottom = 87.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 text = "Ammo: Null"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Coins" type="Label" parent="." unique_id=1329355091]
-layout_mode = 0
-offset_left = 2396.0
-offset_top = 70.0
-offset_right = 2489.0
-offset_bottom = 93.0
+[node name="References" type="Control" parent="." unique_id=531673872]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="References" unique_id=255576192]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -32.0
+offset_bottom = 32.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(2, 2)
 pivot_offset_ratio = Vector2(0.5, 0.5)
-text = "Energy: Null"
-
-[node name="Wave" type="Label" parent="." unique_id=1437511696]
-layout_mode = 0
-offset_left = 171.0
-offset_top = 67.0
-offset_right = 263.0
-offset_bottom = 90.0
-pivot_offset_ratio = Vector2(0.5, 0.5)
-text = "Wave = Null"
-
-[node name="Energy" type="Sprite2D" parent="." unique_id=1809905083]
-position = Vector2(2314, 80)
-texture = ExtResource("4_qtcwj")
-
-[node name="Bullet" type="ColorRect" parent="." unique_id=1692750713]
-layout_mode = 0
-offset_left = 11.0
-offset_top = 1562.0
-offset_right = 51.0
-offset_bottom = 1611.5991
-rotation = 1.5707964
-scale = Vector2(2, 1)
-pivot_offset_ratio = Vector2(0.5, 0.5)
-color = Color(0, 1, 0, 1)
-
-[node name="Basic" type="Sprite2D" parent="." unique_id=1004266707]
-position = Vector2(78, 85)
-scale = Vector2(4, 4)
-texture = ExtResource("5_bgrxv")
+mouse_filter = 2
+texture = ExtResource("5_qtcwj")
+stretch_mode = 2

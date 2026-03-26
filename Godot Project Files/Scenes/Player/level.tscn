@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dwfpcfxio54y4" path="res://Scenes/Player/gun.tscn" id="1_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://dhi5lmgj3uvww" path="res://Scenes/Player/player.tscn" id="1_tumq0"]
+[ext_resource type="Script" uid="uid://cgf5evoy3virp" path="res://Scripts/level.gd" id="1_xtwv6"]
 [ext_resource type="PackedScene" uid="uid://c15ot5xsggyjm" path="res://Scenes/Technical/enemy_spawner.tscn" id="4_81xng"]
 [ext_resource type="Script" uid="uid://v465i0ic0kkc" path="res://Scripts/music_player.gd" id="4_oqrs4"]
 [ext_resource type="Texture2D" uid="uid://dldny1656jdcn" path="res://Assets/Background/Star_Spritesheet.png" id="6_oqrs4"]
@@ -80,6 +81,7 @@ tile_size = Vector2i(3, 3)
 sources/0 = SubResource("TileSetAtlasSource_o6vcw")
 
 [node name="Level" type="Node2D" unique_id=1152983213]
+script = ExtResource("1_xtwv6")
 
 [node name="Gun" parent="." unique_id=961834057 instance=ExtResource("1_k5f4k")]
 position = Vector2(1280, 832)
