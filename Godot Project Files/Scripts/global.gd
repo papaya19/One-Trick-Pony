@@ -195,5 +195,3 @@ var test: bool = false
 func _ready() -> void:
 	print(screen_size)
 	$"GUI/HUD".process_mode = Node.PROCESS_MODE_DISABLED
-	get_viewport().size = screen_size / 2
-	get_viewport().position = screen_size / 4
