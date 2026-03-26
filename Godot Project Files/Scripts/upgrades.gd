@@ -14,7 +14,7 @@ var option_1_value: int
 var option_2_value: int
 var option_3_value: int
 
-var refresh_cost = 3
+var refresh_cost = 2
 var heal_cost = 5
 
 func _ready() -> void:
@@ -64,9 +64,15 @@ func refresh_shop():
 	option_1_value = get_random_value(option_1_upgrade)
 	option_2_value = get_random_value(option_2_upgrade)
 	option_3_value = get_random_value(option_3_upgrade)
-	#$VBoxContainer/Upgrades/Control1/Option_1.text = Global.upgrade_stats[option_1_upgrade]["description"] + str(option_1_value) + "%"
-	#$"VBoxContainer/Upgrades/Control2/Option_2".text = Global.upgrade_stats[option_2_upgrade]["description"] + str(option_2_value) + "%"
-	#$"VBoxContainer/Upgrades/Control3/Option_3".text = Global.upgrade_stats[option_3_upgrade]["description"] + str(option_3_value) + "%"
+	$VBoxContainer/Upgrades/Control1/Option_1/Tittle.text = Global.upgrade_stats[option_1_upgrade]["tittle"]
+	$VBoxContainer/Upgrades/Control2/Option_2/Tittle.text = Global.upgrade_stats[option_2_upgrade]["tittle"]
+	$VBoxContainer/Upgrades/Control3/Option_3/Tittle.text = Global.upgrade_stats[option_3_upgrade]["tittle"]
+	$VBoxContainer/Upgrades/Control1/Option_1/Description.text = Global.upgrade_stats[option_1_upgrade]["description"] + str(option_1_value) + "%"
+	$VBoxContainer/Upgrades/Control2/Option_2/Description.text = Global.upgrade_stats[option_2_upgrade]["description"] + str(option_2_value) + "%"
+	$VBoxContainer/Upgrades/Control3/Option_3/Description.text = Global.upgrade_stats[option_3_upgrade]["description"] + str(option_3_value) + "%"
+	$VBoxContainer/Upgrades/Control1/Option_1/Cost.text = "Cost: " + str(Global.upgrade_stats[option_1_upgrade]["values"][option_1_value]["cost"])
+	$VBoxContainer/Upgrades/Control2/Option_2/Cost.text = "Cost: " + str(Global.upgrade_stats[option_2_upgrade]["values"][option_2_value]["cost"])
+	$VBoxContainer/Upgrades/Control3/Option_3/Cost.text = "Cost: " + str(Global.upgrade_stats[option_3_upgrade]["values"][option_3_value]["cost"])
 	option_1.visible = true
 	option_2.visible = true
 	option_3.visible = true
