@@ -4,6 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://brlhoda4wus0r" path="res://Assets/GUI/Buttons/Upgrades/Upgrade_Card.png" id="2_ckf2p"]
 [ext_resource type="Texture2D" uid="uid://g2pjat76csdp" path="res://Assets/GUI/Buttons/Upgrades/Heal_Button.png" id="3_5hanb"]
 [ext_resource type="Texture2D" uid="uid://b8r315wnpmdgy" path="res://Assets/GUI/Buttons/Upgrades/Refresh_Button.png" id="3_6vvpt"]
+[ext_resource type="Texture2D" uid="uid://cb368jjk8bvlt" path="res://Assets/GUI/Buttons/Upgrades/Upgrade_Card_Disabeled.png" id="3_d8j4a"]
+[ext_resource type="Texture2D" uid="uid://cvyuu6e4871ws" path="res://Assets/GUI/Buttons/Upgrades/Refresh_Button_Disabeled.png" id="4_3vqqe"]
+[ext_resource type="Texture2D" uid="uid://cg56eb64vv4t7" path="res://Assets/GUI/Buttons/Upgrades/Heal_Button_Disabeled.png" id="6_u4y86"]
+[ext_resource type="Texture2D" uid="uid://dvkd0udfealsl" path="res://Assets/GUI/Buttons/Upgrades/Exit_Button.png" id="8_vm075"]
+[ext_resource type="Texture2D" uid="uid://b0ery0t3vvlq4" path="res://Assets/GUI/Buttons/Upgrades/Exit_Button_Disabeled.png" id="9_sdigx"]
 
 [node name="Upgrade" type="Control" unique_id=706410703]
 layout_mode = 3
@@ -12,9 +17,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.8, 0.8)
+scale = Vector2(0.75, 0.75)
 pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("1_wqk08")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=275869001]
+visible = false
+layout_mode = 0
+offset_left = 40.0
+offset_right = 2796.2498
+offset_bottom = 1746.9998
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=620650027]
 layout_mode = 1
@@ -43,6 +55,7 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("2_ckf2p")
+texture_disabled = ExtResource("3_d8j4a")
 stretch_mode = 5
 
 [node name="Control2" type="Control" parent="VBoxContainer/Upgrades" unique_id=1208723989]
@@ -58,6 +71,7 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("2_ckf2p")
+texture_disabled = ExtResource("3_d8j4a")
 stretch_mode = 5
 
 [node name="Control3" type="Control" parent="VBoxContainer/Upgrades" unique_id=679500348]
@@ -73,6 +87,7 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("2_ckf2p")
+texture_disabled = ExtResource("3_d8j4a")
 stretch_mode = 5
 
 [node name="Refresh" type="HBoxContainer" parent="VBoxContainer" unique_id=1824092372]
@@ -93,7 +108,26 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("3_6vvpt")
+texture_disabled = ExtResource("4_3vqqe")
 stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/Refresh/Control1/Refresh" unique_id=1548290065]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -70.5
+offset_right = -200.0
+offset_bottom = 70.5
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 50
+text = "Refresh Shop
+Cost: 2 Energy"
 
 [node name="Control2" type="Control" parent="VBoxContainer/Refresh" unique_id=844447468]
 layout_mode = 2
@@ -108,7 +142,26 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("3_5hanb")
+texture_disabled = ExtResource("6_u4y86")
 stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/Refresh/Control2/Heal" unique_id=1275126528]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -70.5
+offset_right = -200.0
+offset_bottom = 70.5
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 50
+text = "Heal 1 HP
+Cost: 5 energy"
 
 [node name="Control3" type="Control" parent="VBoxContainer/Refresh" unique_id=759664090]
 layout_mode = 2
@@ -122,7 +175,26 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("8_vm075")
+texture_disabled = ExtResource("9_sdigx")
 stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/Refresh/Control3/Exit" unique_id=398288730]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -70.5
+offset_right = -200.0
+offset_bottom = 70.5
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 50
+text = "Exit"
 
 [connection signal="mouse_entered" from="VBoxContainer/Upgrades/Control1/Option_1" to="." method="_on_option_1_mouse_entered"]
 [connection signal="mouse_exited" from="VBoxContainer/Upgrades/Control1/Option_1" to="." method="_on_option_1_mouse_exited"]
