@@ -9,9 +9,9 @@ var ship_stats: Dictionary = {
 		"texture_file_path": "res://Assets/Ships/Shotgun.png", 
 		"death_particles_file_path": "res://Assets/Particles/Death/Ships/Shotgun_Death.png",
 		"magazine_size": 6, 
-		"bullet_damage": 40, 
+		"bullet_damage": 10, 
 		"reload_time": 1.8, 
-		"shooting_speed": 0.8, 
+		"shooting_speed": 1, 
 		"spread": 0.2, 
 		"bullets_per_shot": 8, 
 		"bullets_pierce": false
@@ -32,8 +32,8 @@ var ship_stats: Dictionary = {
 	"Sniper": {
 		"texture_file_path": "res://Assets/Ships/Sniper.png", 
 		"death_particles_file_path": "res://Assets/Particles/Death/Ships/Sniper_Death.png",
-		"magazine_size": 3, 
-		"bullet_damage": 180, 
+		"magazine_size": 5, 
+		"bullet_damage": 150, 
 		"reload_time": 2.25, 
 		"shooting_speed": 1.25, 
 		"spread": 0, 
@@ -120,31 +120,31 @@ var enemy_stats: Dictionary = {
 }
 var upgrade_stats: Dictionary = {
 	"bullet_damage": {
-		"title": "Damage", 
+		"tittle": "Damage", 
 		"description": "Increases damage by ", 
 		"decrease": false,
 		"values": {
-			25: {"chance": 50, "cost": 2}, 
-			50: {"chance": 25, "cost": 4}, 
-			100: {"chance": 20, "cost": 6}, 
-			200: {"chance": 5, "cost": 8}
+			10: {"chance": 50, "cost": 2}, 
+			25: {"chance": 25, "cost": 4}, 
+			50: {"chance": 20, "cost": 6}, 
+			75: {"chance": 5, "cost": 8}
 		}
 	}, 
 
 	"shooting_speed": {
-		"title": "Fire rate", 
+		"tittle": "Fire rate", 
 		"description": "Increases fire rate by ", 
 		"decrease": true,
 		"values": {
-			25: {"chance": 50, "cost": 2}, 
-			50: {"chance": 25, "cost": 4}, 
-			75: {"chance": 20, "cost": 6}, 
-			100: {"chance": 5, "cost": 8}
+			5: {"chance": 50, "cost": 2}, 
+			10: {"chance": 25, "cost": 4}, 
+			15: {"chance": 20, "cost": 6}, 
+			20: {"chance": 5, "cost": 8}
 		}
 	}, 
 
 	"magazine_size": {
-		"title": "Ammunition Capacity", 
+		"tittle": "Ammunition Capacity", 
 		"description": "Increases ammunition capacity by ", 
 		"decrease": false,
 		"values": {
@@ -156,7 +156,7 @@ var upgrade_stats: Dictionary = {
 	}, 
 
 	"reload_time": {
-		"title": "Reload Speed", 
+		"tittle": "Reload Speed", 
 		"description": "Increases reload speed by ", 
 		"decrease": true,
 		"values": {
