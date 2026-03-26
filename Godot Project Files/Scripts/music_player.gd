@@ -7,7 +7,6 @@ var playlist: Array = [
 	preload("res://Assets/Sounds/Music/thestrudelsong.wav")
 ]
 func _ready():
-	pass
 	play_random_song()
 
 func play_random_song():
