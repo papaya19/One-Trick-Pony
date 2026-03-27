@@ -26,8 +26,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Global.current_wave == 15:
 		heal_cost = 1000
-		
-	refresh_cost += Global.current_wave * pow(0.5, 4)
+		$VBoxContainer/Refresh/Control2/Heal/Label.text = "Heal 1 HP \nCost: " + str(refresh_cost) + " energy"
+	
 	if Input.is_action_just_pressed("exit") and get_tree().paused:
 		self.visible = false
 		get_tree().paused = false
@@ -159,6 +159,8 @@ func _on_refresh_pressed() -> void:
 	refresh.visible = true
 	var tween2 = create_tween().set_trans(Tween.TRANS_SPRING)
 	tween2.tween_property(heal, "scale", Vector2(1,1), 0.2)
+	refresh_cost = refresh_cost + Global.current_wave
+	$VBoxContainer/Refresh/Control1/Refresh/Label.text = "Refresh Shop \nCost: " + str(refresh_cost) + " Energy"
 func _on_refresh_mouse_entered() -> void:
 	if refresh.disabled == false:
 		var tween = create_tween().set_trans(Tween.TRANS_SPRING)
