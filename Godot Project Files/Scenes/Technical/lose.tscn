@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://b2vrrysplo2fm"]
+
+[ext_resource type="Script" uid="uid://br8jq636ve7ku" path="res://Scripts/lose.gd" id="1_8x650"]
+[ext_resource type="Texture2D" uid="uid://dpt6vregpvdtr" path="res://Assets/Background/Basic_Background.png" id="2_6i1qr"]
+
+[node name="Lose" type="Control" unique_id=1073039646]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8x650")
+
+[node name="ColorRect" type="TextureRect" parent="." unique_id=1238542260]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = ExtResource("2_6i1qr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2139919144]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1306754451]
+layout_mode = 2
+theme_override_font_sizes/font_size = 200
+text = "You died"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1927528793]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 200
+text = "Play again"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1735626008]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 200
+text = "Quit
+(Not web compatible)"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

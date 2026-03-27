@@ -21,7 +21,7 @@ func gain_energy(energy_value):
 	Global.energy_count += energy_value
 
 func player_died():
-	get_tree().quit()
+	Global.queue_lose.emit()
 
 func change_ship(ship):
 	$Sprite2D.texture = load(Global.ship_stats[ship]["texture_file_path"])

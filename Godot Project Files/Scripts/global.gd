@@ -4,7 +4,7 @@ var screen_size: Vector2:
 	get:
 		return get_viewport().get_visible_rect().size
 
-var ship_stats: Dictionary = {
+const ship_stats: Dictionary = {
 	"Shotgun": {
 		"texture_file_path": "res://Assets/Ships/Shotgun.png", 
 		"death_particles_file_path": "res://Assets/Particles/Death/Ships/Shotgun_Death.png",
@@ -52,7 +52,7 @@ var ship_stats: Dictionary = {
 		"bullets_pierce": true
 	}
 }
-var enemy_stats: Dictionary = {
+const enemy_stats: Dictionary = {
 	"Basic": {
 		"texture_file_path": "res://Assets/Enemies/Basic.png", 
 		"death_particles_file_path": "res://Assets/Particles/Death/Enemies/Basic_Death.png", 
@@ -118,7 +118,7 @@ var enemy_stats: Dictionary = {
 		"can_explode": false
 	},
 }
-var upgrade_stats: Dictionary = {
+const upgrade_stats: Dictionary = {
 	"bullet_damage": {
 		"tittle": "Damage", 
 		"description": "Increases damage by ", 
@@ -173,6 +173,7 @@ signal player_take_damage(damage_amount: int)
 signal player_gain_energy(energy_value: int)
 signal queue_upgrade()
 signal queue_win()
+signal queue_lose()
 signal wave_start()
 @export var energy_count: int = 0
 @export var invincible: bool = false
