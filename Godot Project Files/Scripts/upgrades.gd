@@ -24,6 +24,10 @@ func _ready() -> void:
 	get_tree().paused = false
 
 func _process(_delta: float) -> void:
+	if Global.current_wave == 15:
+		heal_cost = 1000
+		
+	refresh_cost += Global.current_wave * pow(0.5, 4)
 	if Input.is_action_just_pressed("exit") and get_tree().paused:
 		self.visible = false
 		get_tree().paused = false
@@ -70,9 +74,9 @@ func refresh_shop():
 	$VBoxContainer/Upgrades/Control1/Option_1/Description.text = Global.upgrade_stats[option_1_upgrade]["description"] + str(option_1_value) + "%"
 	$VBoxContainer/Upgrades/Control2/Option_2/Description.text = Global.upgrade_stats[option_2_upgrade]["description"] + str(option_2_value) + "%"
 	$VBoxContainer/Upgrades/Control3/Option_3/Description.text = Global.upgrade_stats[option_3_upgrade]["description"] + str(option_3_value) + "%"
-	$VBoxContainer/Upgrades/Control1/Option_1/Cost.text = "Cost: " + str(Global.upgrade_stats[option_1_upgrade]["values"][option_1_value]["cost"])
-	$VBoxContainer/Upgrades/Control2/Option_2/Cost.text = "Cost: " + str(Global.upgrade_stats[option_2_upgrade]["values"][option_2_value]["cost"])
-	$VBoxContainer/Upgrades/Control3/Option_3/Cost.text = "Cost: " + str(Global.upgrade_stats[option_3_upgrade]["values"][option_3_value]["cost"])
+	$VBoxContainer/Upgrades/Control1/Option_1/Cost.text = "Cost: " + str(Global.upgrade_stats[option_1_upgrade]["values"][option_1_value]["cost"] * Global.current_wave)
+	$VBoxContainer/Upgrades/Control2/Option_2/Cost.text = "Cost: " + str(Global.upgrade_stats[option_2_upgrade]["values"][option_2_value]["cost"] * Global.current_wave)
+	$VBoxContainer/Upgrades/Control3/Option_3/Cost.text = "Cost: " + str(Global.upgrade_stats[option_3_upgrade]["values"][option_3_value]["cost"] * Global.current_wave)
 	option_1.visible = true
 	option_2.visible = true
 	option_3.visible = true
@@ -90,7 +94,7 @@ func upgrade(selected_upgrade, selected_upgrade_value):
 	else:
 		Global.set(selected_upgrade, Global.get(selected_upgrade) + Global.get(selected_upgrade) * selected_upgrade_value * 0.01)
 	
-	Global.energy_count -=  Global.upgrade_stats[selected_upgrade]["values"][selected_upgrade_value]["cost"]
+	Global.energy_count -=  Global.upgrade_stats[selected_upgrade]["values"][selected_upgrade_value]["cost"] * Global.current_wave
 
 func get_random_value(option):
 	var current_sum = 0
