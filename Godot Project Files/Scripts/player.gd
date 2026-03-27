@@ -10,12 +10,14 @@ func _process(_delta: float) -> void:
 	look_at(get_global_mouse_position())
 	if Global.player_health <= 0:
 		player_died()
+		
 	
 func take_damage(damage):
 	if not Global.invincible:
 		Global.player_health -= damage
 		$CPUParticles2D.amount = damage * 100
 		$CPUParticles2D.emitting = true
+		Global.shake_screen(50.0, 0.5)
 
 func gain_energy(energy_value):
 	Global.energy_count += energy_value

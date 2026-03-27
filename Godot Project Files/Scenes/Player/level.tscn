@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dldny1656jdcn" path="res://Assets/Background/Star_Spritesheet.png" id="6_oqrs4"]
 [ext_resource type="Texture2D" uid="uid://dpoh6p8hma6ku" path="res://Assets/Background/Black_Hole.png" id="7_i5435"]
 [ext_resource type="Script" uid="uid://bl6k15c2rsw4o" path="res://Scripts/random_stars.gd" id="7_o6vcw"]
+[ext_resource type="Script" uid="uid://c8sm7egvbc7ys" path="res://Scripts/screen_shake.gd" id="9_i8815"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6phgx"]
 size = Vector2(100, 100)
@@ -82,6 +83,11 @@ sources/0 = SubResource("TileSetAtlasSource_o6vcw")
 
 [node name="Level" type="Node2D" unique_id=1152983213]
 script = ExtResource("1_xtwv6")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=424070283]
+position = Vector2(1280, 832)
+limit_enabled = false
+script = ExtResource("9_i8815")
 
 [node name="Gun" parent="." unique_id=961834057 instance=ExtResource("1_k5f4k")]
 position = Vector2(1280, 832)

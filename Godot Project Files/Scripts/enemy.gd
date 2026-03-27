@@ -51,9 +51,11 @@ func enemy_take_damage(damage_amount):
 	if enemy_health <= 0:
 		if can_explode:
 			explode()
+			Global.shake_screen(50.0, 0.5)
 		$CPUParticles2D.emitting = true
 		set_physics_process(false)
 		dead = true
+		Global.shake_screen(10.0, 0.3)
 		$Sprite2D.hide()
 		$Area2D/CollisionShape2D.set_deferred("disabled", true)
 		spawn_energy()

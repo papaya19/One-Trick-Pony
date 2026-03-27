@@ -1,5 +1,11 @@
 extends Node
 
+
+signal request_shake(intensity, duration)
+
+func shake_screen(intensity = 5.0, duration = 0.2):
+	request_shake.emit(intensity, duration)
+
 var screen_size: Vector2: 
 	get:
 		return get_viewport().get_visible_rect().size
@@ -23,7 +29,7 @@ const ship_stats: Dictionary = {
 		"magazine_size": 20, 
 		"bullet_damage": 60, 
 		"reload_time": 1.3, 
-		"shooting_speed": 0.3, 
+		"shooting_speed": 0.5, 
 		"spread": 0,
 		"bullets_per_shot": 1, 
 		"bullets_pierce": false
