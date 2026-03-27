@@ -10,9 +10,9 @@ func _ready():
 	play_random_song()
 
 func play_random_song():
-	self.pitch_scale = randf_range(0.5, 2.0)
-	if self.pitch_scale == 2:
-		self.pitch_scale = 12
+	self.pitch_scale = randf_range(0.5, 1.5)
+	if self.pitch_scale == 1.5:
+		self.pitch_scale = randf_range(1.5, 15)
 	stream = playlist.pick_random()
 	play()
 
