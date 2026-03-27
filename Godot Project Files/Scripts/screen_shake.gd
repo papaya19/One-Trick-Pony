@@ -7,7 +7,6 @@ func _ready():
 	anchor_mode = Camera2D.ANCHOR_MODE_DRAG_CENTER
 	var screen_size = get_viewport_rect().size
 	global_position = screen_size / 2
-	Global.request_shake.connect(_on_shake_requested)
 
 func _process(_delta):
 	if shake_intensity > 0:
