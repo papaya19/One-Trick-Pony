@@ -130,10 +130,10 @@ const upgrade_stats: Dictionary = {
 		"description": "Increases damage by ", 
 		"decrease": false,
 		"values": {
-			10: {"chance": 50, "cost": 2}, 
-			25: {"chance": 25, "cost": 4}, 
-			50: {"chance": 20, "cost": 6}, 
-			75: {"chance": 5, "cost": 8}
+			10: {"chance": 50, "cost": 1}, 
+			25: {"chance": 25, "cost": 2}, 
+			50: {"chance": 20, "cost": 3}, 
+			75: {"chance": 5, "cost": 4}
 		}
 	}, 
 
@@ -142,10 +142,10 @@ const upgrade_stats: Dictionary = {
 		"description": "Increases fire rate by ", 
 		"decrease": true,
 		"values": {
-			5: {"chance": 50, "cost": 2}, 
-			10: {"chance": 25, "cost": 4}, 
-			15: {"chance": 20, "cost": 6}, 
-			20: {"chance": 5, "cost": 8}
+			5: {"chance": 50, "cost": 1}, 
+			10: {"chance": 25, "cost": 2}, 
+			15: {"chance": 20, "cost": 3}, 
+			20: {"chance": 5, "cost": 4}
 		}
 	}, 
 
@@ -154,10 +154,10 @@ const upgrade_stats: Dictionary = {
 		"description": "Increases ammunition capacity by ", 
 		"decrease": false,
 		"values": {
-			25: {"chance": 50, "cost": 2}, 
-			50: {"chance": 25, "cost": 4}, 
-			75: {"chance": 20, "cost": 6}, 
-			100: {"chance": 5, "cost": 8}
+			25: {"chance": 50, "cost": 1}, 
+			50: {"chance": 25, "cost": 2}, 
+			75: {"chance": 20, "cost": 3}, 
+			100: {"chance": 5, "cost": 4}
 		}
 	}, 
 
@@ -166,10 +166,10 @@ const upgrade_stats: Dictionary = {
 		"description": "Increases reload speed by ", 
 		"decrease": true,
 		"values": {
-			5: {"chance": 50, "cost": 2}, 
-			10: {"chance": 25, "cost": 4}, 
-			15: {"chance": 20, "cost": 6}, 
-			20: {"chance": 5, "cost": 8}
+			5: {"chance": 50, "cost": 1}, 
+			10: {"chance": 25, "cost": 2}, 
+			15: {"chance": 20, "cost": 3}, 
+			20: {"chance": 5, "cost": 4}
 		}
 	}, 
 	
