@@ -14,9 +14,7 @@ var option_1_value: int
 var option_2_value: int
 var option_3_value: int
 
-var refresh_cost: int = 2
-var heal_cost: int = 5
-var upgrade_multiplier: int = 1
+
 
 func _ready() -> void:
 	refresh_shop()
@@ -26,8 +24,8 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if Global.current_wave == 15:
-		heal_cost = 1000
-		$VBoxContainer/Refresh/Control2/Heal/Label.text = "Heal 1 HP \nCost: " + str(refresh_cost) + " energy"
+		Global.heal_cost = 1000
+		$VBoxContainer/Refresh/Control2/Heal/Label.text = "Heal 1 HP \nCost: " + str(Global.refresh_cost) + " energy"
 	
 	if Input.is_action_just_pressed("exit") and get_tree().paused:
 		self.visible = false
@@ -37,27 +35,27 @@ func _process(_delta: float) -> void:
 		return
 
 
-	if Global.energy_count >= Global.upgrade_stats[option_1_upgrade]["values"][option_1_value]["cost"] * upgrade_multiplier:
+	if Global.energy_count >= Global.upgrade_stats[option_1_upgrade]["values"][option_1_value]["cost"] * Global.upgrade_multiplier:
 		option_1.disabled = false
 	else:
 		option_1.disabled = true
 	
-	if Global.energy_count >= Global.upgrade_stats[option_2_upgrade]["values"][option_2_value]["cost"] * upgrade_multiplier:
+	if Global.energy_count >= Global.upgrade_stats[option_2_upgrade]["values"][option_2_value]["cost"] * Global.upgrade_multiplier:
 		option_2.disabled = false
 	else:
 		option_2.disabled = true
 	
-	if Global.energy_count >= Global.upgrade_stats[option_3_upgrade]["values"][option_3_value]["cost"] * upgrade_multiplier:
+	if Global.energy_count >= Global.upgrade_stats[option_3_upgrade]["values"][option_3_value]["cost"] * Global.upgrade_multiplier:
 		option_3.disabled = false
 	else:
 		option_3.disabled = true
 	
-	if Global.energy_count >= refresh_cost:
+	if Global.energy_count >= Global.refresh_cost:
 		refresh.disabled = false
 	else:
 		refresh.disabled = true
 
-	if Global.player_health < 8 and Global.energy_count >= heal_cost:
+	if Global.player_health < 8 and Global.energy_count >= Global.heal_cost:
 		heal.disabled = false
 	else:
 		heal.disabled = true
@@ -75,9 +73,9 @@ func refresh_shop():
 	$VBoxContainer/Upgrades/Control1/Option_1/Description.text = Global.upgrade_stats[option_1_upgrade]["description"] + str(option_1_value) + "%"
 	$VBoxContainer/Upgrades/Control2/Option_2/Description.text = Global.upgrade_stats[option_2_upgrade]["description"] + str(option_2_value) + "%"
 	$VBoxContainer/Upgrades/Control3/Option_3/Description.text = Global.upgrade_stats[option_3_upgrade]["description"] + str(option_3_value) + "%"
-	$VBoxContainer/Upgrades/Control1/Option_1/Cost.text = "Cost: " + str(Global.upgrade_stats[option_1_upgrade]["values"][option_1_value]["cost"] * upgrade_multiplier)
-	$VBoxContainer/Upgrades/Control2/Option_2/Cost.text = "Cost: " + str(Global.upgrade_stats[option_2_upgrade]["values"][option_2_value]["cost"] * upgrade_multiplier)
-	$VBoxContainer/Upgrades/Control3/Option_3/Cost.text = "Cost: " + str(Global.upgrade_stats[option_3_upgrade]["values"][option_3_value]["cost"] * upgrade_multiplier)
+	$VBoxContainer/Upgrades/Control1/Option_1/Cost.text = "Cost: " + str(Global.upgrade_stats[option_1_upgrade]["values"][option_1_value]["cost"] * Global.upgrade_multiplier)
+	$VBoxContainer/Upgrades/Control2/Option_2/Cost.text = "Cost: " + str(Global.upgrade_stats[option_2_upgrade]["values"][option_2_value]["cost"] * Global.upgrade_multiplier)
+	$VBoxContainer/Upgrades/Control3/Option_3/Cost.text = "Cost: " + str(Global.upgrade_stats[option_3_upgrade]["values"][option_3_value]["cost"] * Global.upgrade_multiplier)
 	option_1.visible = true
 	option_2.visible = true
 	option_3.visible = true
@@ -95,7 +93,7 @@ func upgrade(selected_upgrade, selected_upgrade_value):
 	else:
 		Global.set(selected_upgrade, Global.get(selected_upgrade) + Global.get(selected_upgrade) * selected_upgrade_value * 0.01)
 	
-	Global.energy_count -=  Global.upgrade_stats[selected_upgrade]["values"][selected_upgrade_value]["cost"]  * upgrade_multiplier
+	Global.energy_count -=  Global.upgrade_stats[selected_upgrade]["values"][selected_upgrade_value]["cost"]  * Global.upgrade_multiplier
 
 func get_random_value(option):
 	var current_sum = 0
@@ -155,14 +153,14 @@ func _on_refresh_pressed() -> void:
 	tween.tween_property(refresh, "scale", Vector2(0,0), 0.1).from_current()
 	await tween.finished
 	refresh.visible = false
-	upgrade_multiplier += floor(Global.current_wave * 0.5)
+	Global.upgrade_multiplier += floor(Global.current_wave * 0.5)
 	refresh_shop()
-	Global.energy_count -= refresh_cost
+	Global.energy_count -= Global.refresh_cost
 	refresh.visible = true
 	var tween2 = create_tween().set_trans(Tween.TRANS_SPRING)
 	tween2.tween_property(heal, "scale", Vector2(1,1), 0.2)
-	refresh_cost = refresh_cost + Global.current_wave
-	$VBoxContainer/Refresh/Control1/Refresh/Label.text = "Refresh Shop \nCost: " + str(refresh_cost) + " Energy"
+	Global.refresh_cost = Global.refresh_cost + Global.current_wave
+	$VBoxContainer/Refresh/Control1/Refresh/Label.text = "Refresh Shop \nCost: " + str(Global.refresh_cost) + " Energy"
 func _on_refresh_mouse_entered() -> void:
 	if refresh.disabled == false:
 		var tween = create_tween().set_trans(Tween.TRANS_SPRING)
@@ -178,7 +176,7 @@ func _on_heal_pressed() -> void:
 	await tween.finished
 	heal.visible = false
 	Global.player_health += 1
-	Global.energy_count -= heal_cost
+	Global.energy_count -= Global.heal_cost
 	heal.visible = true
 	var tween2 = create_tween().set_trans(Tween.TRANS_SPRING)
 	tween2.tween_property(heal, "scale", Vector2(1,1), 0.2)

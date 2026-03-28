@@ -200,6 +200,9 @@ var bullets_pierce: bool
 
 var can_shoot: bool = true
 
+var refresh_cost: int = 2
+var heal_cost: int = 5
+var upgrade_multiplier: int = 1
 
 func _ready() -> void:
 	$"GUI/HUD".process_mode = Node.PROCESS_MODE_DISABLED

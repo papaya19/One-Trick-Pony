@@ -19,6 +19,9 @@ func _on_button_pressed() -> void:
 	Global.bullet_count = 0
 	Global.player_health = 8
 	Global.current_wave = 1
+	Global.refresh_cost = 2
+	Global.heal_cost = 5
+	Global.upgrade_multiplier = 1
 
 func _on_button_2_pressed() -> void:
 	get_tree().quit()
