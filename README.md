@@ -1,3 +1,3 @@
-# One-Trick-Pony
+# Spaceship
 me sethy and nick game
 this is such a good game 
